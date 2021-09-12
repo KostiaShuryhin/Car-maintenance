@@ -38,12 +38,12 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hIB-sV-Oui" userLabel="FT SV">
                                                 <rect key="frame" x="0.0" y="50.333333333333314" width="330" height="98"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pthone nomber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ZT-0q-W0o">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ZT-0q-W0o">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FI-Kj-oIG">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FI-Kj-oIG">
                                                         <rect key="frame" x="0.0" y="64" width="330" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -65,6 +65,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="singInTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7ia-Dg-IkN"/>
                                                     <segue destination="7l0-Js-NOo" kind="modal" modalPresentationStyle="fullScreen" id="ZON-px-myQ"/>
                                                 </connections>
                                             </button>
@@ -75,6 +76,7 @@
                                                     <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="registerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cwl-5o-W5l"/>
                                                     <segue destination="abD-Bq-agW" kind="show" id="Pj1-2U-9IO"/>
                                                 </connections>
                                             </button>
@@ -100,6 +102,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hjE-5s-3hs" secondAttribute="trailing" constant="30" id="yGA-z4-u67"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="3ZT-0q-W0o" id="ZBO-B0-qEb"/>
+                        <outlet property="errorLbl" destination="PJV-md-pwa" id="0wz-pN-pzY"/>
+                        <outlet property="passwordTF" destination="8FI-Kj-oIG" id="l9b-Ph-9Lw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

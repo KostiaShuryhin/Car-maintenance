@@ -53,12 +53,13 @@
             </objects>
             <point key="canvasLocation" x="212" y="172"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Title-->
         <scene sceneID="FLR-2M-jx4">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GRI-RR-FPa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="dyP-U1-3vo"/>
+                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="dyP-U1-3vo"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CSb-1f-Q4j">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

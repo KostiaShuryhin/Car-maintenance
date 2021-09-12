@@ -20,6 +20,7 @@
 		B52AC7F126EE22EB000B72FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F026EE22EB000B72FE /* FirebaseAuth */; };
 		B52AC7F326EE22EB000B72FE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F226EE22EB000B72FE /* FirebaseDatabase */; };
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
+		B5E1090D26EE5986006B50AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1090C26EE5986006B50AE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B52AC7E426EE2049000B72FE /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		B52AC7E626EE209B000B72FE /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maintenance.storyboard; sourceTree = "<group>"; };
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5E1090C26EE5986006B50AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		B52AC7D326EE1C15000B72FE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B5E1090C26EE5986006B50AE /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -111,11 +114,11 @@
 		B52AC7D626EE1C6E000B72FE /* Veiws */ = {
 			isa = PBXGroup;
 			children = (
+				B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */,
 				B52AC7EA26EE210F000B72FE /* MaintenanceFlow */,
 				B52AC7E926EE20F0000B72FE /* StatisticsFlow */,
 				B52AC7E826EE20CE000B72FE /* GarageFlow */,
 				B52AC7DB26EE1DEA000B72FE /* LaunchAndSingIn */,
-				B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */,
 			);
 			path = Veiws;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				B52AC7C026EE1C0D000B72FE /* AppDelegate.swift in Sources */,
 				B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */,
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
+				B5E1090D26EE5986006B50AE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

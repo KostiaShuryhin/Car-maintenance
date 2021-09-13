@@ -20,6 +20,7 @@
 		B52AC7F126EE22EB000B72FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F026EE22EB000B72FE /* FirebaseAuth */; };
 		B52AC7F326EE22EB000B72FE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F226EE22EB000B72FE /* FirebaseDatabase */; };
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
+		B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C766ED26EF6EBB00EAD2D9 /* User.swift */; };
 		B5E1090D26EE5986006B50AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1090C26EE5986006B50AE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		B52AC7E426EE2049000B72FE /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		B52AC7E626EE209B000B72FE /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maintenance.storyboard; sourceTree = "<group>"; };
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5C766ED26EF6EBB00EAD2D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5E1090C26EE5986006B50AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 		B52AC7D426EE1C46000B72FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5C766ED26EF6EBB00EAD2D9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				B52AC7C026EE1C0D000B72FE /* AppDelegate.swift in Sources */,
 				B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */,
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
+				B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */,
 				B5E1090D26EE5986006B50AE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

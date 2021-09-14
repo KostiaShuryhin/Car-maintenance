@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DuF-wm-7i1">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hjE-5s-3hs" userLabel="Main Stack View">
-                                <rect key="frame" x="30" y="143.99999999999997" width="330" height="402.33333333333326"/>
+                                <rect key="frame" x="30" y="187.99999999999997" width="330" height="402.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Maintenance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPo-CM-LJw">
                                         <rect key="frame" x="90.666666666666671" y="0.0" width="148.66666666666663" height="24"/>
@@ -46,7 +46,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FI-Kj-oIG">
                                                         <rect key="frame" x="0.0" y="64" width="330" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -66,11 +66,10 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="singInTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7ia-Dg-IkN"/>
-                                                    <segue destination="7l0-Js-NOo" kind="modal" modalPresentationStyle="fullScreen" id="ZON-px-myQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cK-VO-bgx">
-                                                <rect key="frame" x="0.0" y="85" width="200" height="65"/>
+                                                <rect key="frame" x="0.0" y="85.000000000000057" width="200" height="65"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <state key="normal" title="Registration">
                                                     <color key="titleColor" name="AccentColor"/>
@@ -102,15 +101,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hjE-5s-3hs" secondAttribute="trailing" constant="30" id="yGA-z4-u67"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ri1-YE-3dd"/>
                     <connections>
                         <outlet property="emailTF" destination="3ZT-0q-W0o" id="ZBO-B0-qEb"/>
                         <outlet property="errorLbl" destination="PJV-md-pwa" id="0wz-pN-pzY"/>
                         <outlet property="passwordTF" destination="8FI-Kj-oIG" id="l9b-Ph-9Lw"/>
+                        <segue destination="7l0-Js-NOo" kind="show" identifier="tasksSegue" id="ZVR-1S-GwU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="72"/>
+            <point key="canvasLocation" x="915.38461538461536" y="71.800947867298575"/>
         </scene>
         <!--MainVeiw-->
         <scene sceneID="dyJ-I8-Pr9">
@@ -120,14 +121,29 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QA-fg-MQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831" y="-378"/>
+            <point key="canvasLocation" x="1014" y="-513"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1Xt-nG-YnX">
+            <objects>
+                <tabBarController id="KE4-3J-Igs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XYv-rD-0Vd"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IJo-jX-QIx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bM0-pV-d0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="-436"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0R9-jH-4Oc">
             <objects>
                 <viewController id="abD-Bq-agW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mpg-RP-Qod">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Это заглушка можно сделать всплывающий алерт" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-w0-Wv7">
@@ -145,7 +161,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbT-6E-ywZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830.76923076923072" y="450.71090047393363"/>
+            <point key="canvasLocation" x="1760" y="450.71090047393363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jhP-5X-P5h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DuF-wm-7i1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kZF-83-80l">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="VUG-jt-MgB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fci-JQ-TFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.846153846153845" y="71.800947867298575"/>
         </scene>
     </scenes>
     <resources>

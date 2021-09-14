@@ -17,9 +17,9 @@
 		B52AC7E326EE2005000B72FE /* Garage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E226EE2005000B72FE /* Garage.storyboard */; };
 		B52AC7E526EE2049000B72FE /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E426EE2049000B72FE /* Statistics.storyboard */; };
 		B52AC7E726EE209B000B72FE /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E626EE209B000B72FE /* Maintenance.storyboard */; };
-		B52AC7F126EE22EB000B72FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F026EE22EB000B72FE /* FirebaseAuth */; };
-		B52AC7F326EE22EB000B72FE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B52AC7F226EE22EB000B72FE /* FirebaseDatabase */; };
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
+		B5BA966D26EF9C5E002BF186 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B5BA966C26EF9C5E002BF186 /* FirebaseAuth */; };
+		B5BA966F26EF9C5E002BF186 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */; };
 		B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C766ED26EF6EBB00EAD2D9 /* User.swift */; };
 		B5E1090D26EE5986006B50AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1090C26EE5986006B50AE /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -47,8 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52AC7F326EE22EB000B72FE /* FirebaseDatabase in Frameworks */,
-				B52AC7F126EE22EB000B72FE /* FirebaseAuth in Frameworks */,
+				B5BA966F26EF9C5E002BF186 /* FirebaseDatabase in Frameworks */,
+				B5BA966D26EF9C5E002BF186 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +60,7 @@
 			children = (
 				B52AC7BE26EE1C0D000B72FE /* Car maintenance */,
 				B52AC7BD26EE1C0D000B72FE /* Products */,
+				B5BA966B26EF9C5E002BF186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +213,13 @@
 			path = VCSingInFlow;
 			sourceTree = "<group>";
 		};
+		B5BA966B26EF9C5E002BF186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,8 +237,8 @@
 			);
 			name = "Car maintenance";
 			packageProductDependencies = (
-				B52AC7F026EE22EB000B72FE /* FirebaseAuth */,
-				B52AC7F226EE22EB000B72FE /* FirebaseDatabase */,
+				B5BA966C26EF9C5E002BF186 /* FirebaseAuth */,
+				B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */,
 			);
 			productName = "Car maintenance";
 			productReference = B52AC7BC26EE1C0D000B72FE /* Car maintenance.app */;
@@ -507,12 +515,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B52AC7F026EE22EB000B72FE /* FirebaseAuth */ = {
+		B5BA966C26EF9C5E002BF186 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B52AC7EF26EE22EB000B72FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		B52AC7F226EE22EB000B72FE /* FirebaseDatabase */ = {
+		B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B52AC7EF26EE22EB000B72FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;

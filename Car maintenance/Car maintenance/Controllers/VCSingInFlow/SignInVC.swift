@@ -20,20 +20,20 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        errorLbl.alpha = 0
 
         ref = Database.database().reference(withPath: "users")
 
         // MARK: - !!! нужно если у нас еще есть действующий user то сделаем переход
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let _ = user else { return }
-//            self?.performSegue(withIdentifier: Constants.Segues.tasks, sender: nil)
+            self?.performSegue(withIdentifier: Constants.Segues.tasks, sender: nil)
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         emailTF.text = ""
         passwordTF.text = ""
+        errorLbl.alpha = 0
     }
 
     @IBAction func singInTapped(_ sender: Any) {

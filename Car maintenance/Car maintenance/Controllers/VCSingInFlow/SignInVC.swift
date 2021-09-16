@@ -33,6 +33,7 @@ class SignInVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         emailTF.text = ""
         passwordTF.text = ""
+        errorLbl.alpha = 0
     }
 
     @IBAction func singInTapped(_ sender: Any) {

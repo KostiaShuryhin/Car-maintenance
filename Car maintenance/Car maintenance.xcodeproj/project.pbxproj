@@ -119,9 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */,
-				B52AC7EA26EE210F000B72FE /* MaintenanceFlow */,
-				B52AC7E926EE20F0000B72FE /* StatisticsFlow */,
 				B52AC7E826EE20CE000B72FE /* GarageFlow */,
+				B52AC7E926EE20F0000B72FE /* StatisticsFlow */,
+				B52AC7EA26EE210F000B72FE /* MaintenanceFlow */,
 				B52AC7DB26EE1DEA000B72FE /* LaunchAndSingIn */,
 			);
 			path = Veiws;

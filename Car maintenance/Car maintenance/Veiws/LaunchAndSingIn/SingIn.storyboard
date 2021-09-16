@@ -121,22 +121,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QA-fg-MQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-513"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="1Xt-nG-YnX">
-            <objects>
-                <tabBarController id="KE4-3J-Igs" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="XYv-rD-0Vd"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IJo-jX-QIx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bM0-pV-d0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2094" y="-436"/>
+            <point key="canvasLocation" x="1528" y="-146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0R9-jH-4Oc">

@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AddMyCar" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMyCar" id="Y6W-OH-hqX" customClass="AddCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msi-Vz-bnR">
                                 <rect key="frame" x="57" y="300.66666666666669" width="300" height="300.00000000000006"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="dtw-UU-cIe"/>
                                     <constraint firstAttribute="height" constant="300" id="ily-aY-RYd"/>
@@ -39,17 +42,19 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tD4-l9-Vbe"/>
-                    <navigationItem key="navigationItem" id="qld-qy-b1Q"/>
+                    <navigationItem key="navigationItem" id="qld-qy-b1Q">
+                        <barButtonItem key="rightBarButtonItem" title="SingOUT" id="X3w-NE-619"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807.2463768115942" y="71.651785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose CarVC-->
         <scene sceneID="hUt-c9-fx6">
             <objects>
-                <viewController id="zRw-GZ-ZAI" sceneMemberID="viewController">
+                <viewController id="zRw-GZ-ZAI" customClass="ChooseCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbH-Hd-wRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,24 +243,24 @@
             </objects>
             <point key="canvasLocation" x="3589.8550724637685" y="71.651785714285708"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Car Model Or ManufacturerTVC-->
         <scene sceneID="obK-Y0-WAJ">
             <objects>
-                <tableViewController id="kwz-jn-1ZM" sceneMemberID="viewController">
+                <tableViewController id="kwz-jn-1ZM" customClass="CarModelOrManufacturerTVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kEt-FA-r8M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7OY-Og-omg" style="IBUITableViewCellStyleDefault" id="4dL-zk-bdD">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="47.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dL-zk-bdD" id="BgJ-8R-RO6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7OY-Og-omg">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="47.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>

@@ -83,6 +83,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="pickerView" destination="733-xf-DeW" id="fgf-wL-lBe"/>
                         <segue destination="17J-y2-rIP" kind="show" id="39F-Pw-McM"/>
                     </connections>
                 </viewController>
@@ -284,7 +285,6 @@
         <!--Item-->
         <scene sceneID="Cb9-lD-lez">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yq1-GJ-m7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K0E-05-iAx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oTJ-FT-zzC"/>
                     <toolbarItems/>
@@ -297,6 +297,7 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="uLR-2d-c8g"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yq1-GJ-m7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="71.651785714285708"/>
         </scene>

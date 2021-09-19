@@ -22,6 +22,9 @@
 		B5BA966F26EF9C5E002BF186 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */; };
 		B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C766ED26EF6EBB00EAD2D9 /* User.swift */; };
 		B5E1090D26EE5986006B50AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1090C26EE5986006B50AE /* Constants.swift */; };
+		B5E4C85E26F76241004ABDC0 /* carQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4C85D26F76240004ABDC0 /* carQuantity.swift */; };
+		B5E4C86126F78220004ABDC0 /* carDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4C86026F78220004ABDC0 /* carDataBase.swift */; };
+		B5E4C86326F782A9004ABDC0 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4C86226F782A9004ABDC0 /* Cars.swift */; };
 		B5F2ADCA26F4BD990036E5AB /* AddCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADC926F4BD990036E5AB /* AddCarVC.swift */; };
 		B5F2ADCC26F4BDEF0036E5AB /* ChooseCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADCB26F4BDEF0036E5AB /* ChooseCarVC.swift */; };
 		B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADCD26F4BE500036E5AB /* SettingsCarTVC.swift */; };
@@ -44,6 +47,9 @@
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5C766ED26EF6EBB00EAD2D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5E1090C26EE5986006B50AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5E4C85D26F76240004ABDC0 /* carQuantity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carQuantity.swift; sourceTree = "<group>"; };
+		B5E4C86026F78220004ABDC0 /* carDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carDataBase.swift; sourceTree = "<group>"; };
+		B5E4C86226F782A9004ABDC0 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		B5F2ADC926F4BD990036E5AB /* AddCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarVC.swift; sourceTree = "<group>"; };
 		B5F2ADCB26F4BDEF0036E5AB /* ChooseCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCarVC.swift; sourceTree = "<group>"; };
 		B5F2ADCD26F4BE500036E5AB /* SettingsCarTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCarTVC.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C766ED26EF6EBB00EAD2D9 /* User.swift */,
+				B5E4C86226F782A9004ABDC0 /* Cars.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 		B52AC7D926EE1CE7000B72FE /* Serveices */ = {
 			isa = PBXGroup;
 			children = (
+				B5E4C85F26F780F0004ABDC0 /* DataBase */,
+				B5E4C85C26F761DE004ABDC0 /* ServeicesFoGarage */,
 			);
 			path = Serveices;
 			sourceTree = "<group>";
@@ -230,6 +239,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5E4C85C26F761DE004ABDC0 /* ServeicesFoGarage */ = {
+			isa = PBXGroup;
+			children = (
+				B5E4C85D26F76240004ABDC0 /* carQuantity.swift */,
+			);
+			path = ServeicesFoGarage;
+			sourceTree = "<group>";
+		};
+		B5E4C85F26F780F0004ABDC0 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				B5E4C86026F78220004ABDC0 /* carDataBase.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +340,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52AC7C026EE1C0D000B72FE /* AppDelegate.swift in Sources */,
+				B5E4C85E26F76241004ABDC0 /* carQuantity.swift in Sources */,
 				B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */,
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
 				B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */,
 				B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */,
+				B5E4C86326F782A9004ABDC0 /* Cars.swift in Sources */,
 				B5F2ADCC26F4BDEF0036E5AB /* ChooseCarVC.swift in Sources */,
 				B5F2ADD026F4BF470036E5AB /* CarModelOrManufacturerTVC.swift in Sources */,
 				B5E1090D26EE5986006B50AE /* Constants.swift in Sources */,
+				B5E4C86126F78220004ABDC0 /* carDataBase.swift in Sources */,
 				B5F2ADCA26F4BD990036E5AB /* AddCarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

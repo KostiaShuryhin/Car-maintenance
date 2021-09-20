@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 // MARK: - этот протокол ChooseCarVCProtocol для описаня и закрытия класса
 
@@ -17,19 +18,40 @@ protocol ChooseCarVCProtocol {
 class ChooseCarVC: UIViewController {
 
     var picekerData: String = ""
-
+    let user: User! = nil
+    var ref: DatabaseReference! = nil
+    var userCars = [UserCar]()
 
     @IBOutlet weak var pickerView: UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         pickerView.dataSource = self
         pickerView.delegate = self
+
+        guard let currentUser = Auth.auth().currentUser else { return }
+        let user = User(user: currentUser)
+        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        ref.observe(.value) { [weak self] snapshot in
+            var userCars = [UserCar]()
+            for item in snapshot.children {
+                guard let snapshot = item as? DataSnapshot,
+                    let userCar = UserCar(snapshot: snapshot) else { continue }
+                userCars.append(userCar)
+            }
+            self?.userCars = userCars
+        }
 
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        let componentsInPicerView: Int = 1
+        return componentsInPicerView
     }
 
     // MARK: - обязательно поправь пикер
@@ -37,11 +59,11 @@ class ChooseCarVC: UIViewController {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 5
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return ""
     }
-     
+
 }
 
 extension ChooseCarVC: ChooseCarVCProtocol, UIPickerViewDataSource, UIPickerViewDelegate {

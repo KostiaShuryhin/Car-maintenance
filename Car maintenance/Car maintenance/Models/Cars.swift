@@ -55,11 +55,11 @@ struct UserCar {
     func convertToDictionary() -> [String: Any] {
         [Constants.makerKey: maker,
             Constants.modelKey: model,
-            Constants.carMileageKey: carMileage,
-            Constants.enginePowerKey: enginePower,
-            Constants.fuelKey: fuel,
-            Constants.yearOfManufactureKey: yearOfManufacture,
-            Constants.yearOfPurchaseKey: yearOfPurchase]
+            Constants.carMileageKey: carMileage ?? nil,
+            Constants.enginePowerKey: enginePower ?? nil,
+            Constants.fuelKey: fuel ?? nil,
+            Constants.yearOfManufactureKey: yearOfManufacture ?? nil,
+            Constants.yearOfPurchaseKey: yearOfPurchase ?? nil]
     }
 
     private enum Constants {

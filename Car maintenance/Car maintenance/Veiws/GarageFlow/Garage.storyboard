@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="2719" y="72"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings CarTVC-->
         <scene sceneID="W8Q-wL-kOB">
             <objects>
-                <tableViewController id="17J-y2-rIP" sceneMemberID="viewController">
+                <tableViewController id="17J-y2-rIP" customClass="SettingsCarTVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eGX-ze-88h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +303,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="39F-Pw-McM"/>
+        <segue reference="Ny5-Nf-d4f"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

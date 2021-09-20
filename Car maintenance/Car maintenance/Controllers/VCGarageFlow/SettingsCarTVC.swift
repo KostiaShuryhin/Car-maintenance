@@ -6,40 +6,46 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsCarTVC: UITableViewController {
+
+//    let user: User! = nil
+//    var ref: DatabaseReference! = nil
+//    let userCar = [UserCar]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        guard let currentUser = Auth.auth().currentUser else { return }
+//        let user = User(user: currentUser)
+//        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return Constants.NumberOfMenuSectionTVC.InSettingsCarTVC
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        var rowsInSection: Int = 0
+        if section == 0 { rowsInSection = Constants.CountOfCellsInSectionInTVCSettingsCar.sectionCarName }
+        else if section == 1 { rowsInSection = Constants.CountOfCellsInSectionInTVCSettingsCar.sectionSettings }
+        else if section == 2 { rowsInSection = Constants.CountOfCellsInSectionInTVCSettingsCar.sectionButtons }
+        return rowsInSection
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
 
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 //protocol AddCarProtocol {
 //    func SingOUT () -> ()
@@ -16,9 +17,13 @@ import UIKit
 
 class AddCarVC: UIViewController{
 
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -29,5 +34,8 @@ class AddCarVC: UIViewController{
     
     func SingOUT() {
     }
+    
+    
+    
     
 }

@@ -17,9 +17,10 @@ protocol ChooseCarVCProtocol {
 
 class ChooseCarVC: UIViewController {
 
+    var logicKeySega: Bool = false
     var picekerData: String = ""
-    let user: User! = nil
-    var ref: DatabaseReference! = nil
+    var user: User! = nil
+    var ref: DatabaseReference!
     var userCars = [UserCar]()
 
     @IBOutlet weak var pickerView: UIPickerView!
@@ -32,20 +33,33 @@ class ChooseCarVC: UIViewController {
 
         guard let currentUser = Auth.auth().currentUser else { return }
         let user = User(user: currentUser)
+        self.user = user
         ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
+        
+        if logicKeySega == true {
+            performSegue(withIdentifier: "IdSettingsCarTVC", sender: nil)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        ref.observe(.value) { [weak self] snapshot in
-            var userCars = [UserCar]()
-            for item in snapshot.children {
-                guard let snapshot = item as? DataSnapshot,
-                    let userCar = UserCar(snapshot: snapshot) else { continue }
-                userCars.append(userCar)
-            }
-            self?.userCars = userCars
+        
+        
+//        ref.observe(.value) { [weak self] snapshot in
+//            var userCars = [UserCar]()
+//            for item in snapshot.children {
+//                guard let snapshot = item as? DataSnapshot,
+//                    let userCar = UserCar(snapshot: snapshot) else { continue }
+//                userCars.append(userCar)
+//            }
+        
+        // может вызвать утечку памяти в замыкании
+        guard let user = user
+              else {
+            return
         }
+        userCars = FirebaseService.getUserCarArray(currentUser: user)
+        
 
     }
 

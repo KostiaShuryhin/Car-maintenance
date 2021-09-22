@@ -10,15 +10,15 @@ import Firebase
 
 struct UserCar {
 
-    var maker: String
-    let model: String
+    let maker: String?
+    let model: String?
     let carMileage: Int?
     let enginePower: Int?
     let fuel: String?
     let yearOfManufacture: Date?
     let yearOfPurchase: Date?
     let ref: DatabaseReference?
-
+    
     // для создания объекта локально
     init (maker: String, model: String, carMileage: Int, enginePower: Int?, guel: Int?, fuel: String?, yearOfManufacture: Date?, yearOfPurchase: Date?) {
         self.maker = maker
@@ -32,7 +32,7 @@ struct UserCar {
     }
 
     // для создания объекта из сети
-    init?(snapshot: DataSnapshot) {
+    init? (snapshot: DataSnapshot) {
         guard let snapshotValu = snapshot.value as? [String: Any],
             let maker = snapshotValu[Constants.makerKey] as? String,
             let model = snapshotValu[Constants.modelKey] as? String,
@@ -41,7 +41,7 @@ struct UserCar {
             let fuel = snapshotValu[Constants.fuelKey] as? String?,
             let yearOfManufacture = snapshotValu[Constants.yearOfManufactureKey] as? Date?,
             let yearOfPurchase = snapshotValu[Constants.yearOfPurchaseKey] as? Date?
-            else { return }
+            else { return nil }
         self.maker = maker
         self.model = model
         self.carMileage = carMileage

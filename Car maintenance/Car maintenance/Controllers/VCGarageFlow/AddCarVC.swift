@@ -19,13 +19,15 @@ class AddCarVC: UIViewController{
 
     var ref: DatabaseReference!
     var user: User!
+    var userCar = [UserCar]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.user = FirebaseService.getCurrentUser()
+        self.userCar = FirebaseService.getUserCarArray(currentUser: user)
         
-        if FirebaseService.getUserCarArray(currentUser: user).isEmpty == false {
+        if userCar.isEmpty == false {
             performSegue(withIdentifier: "IdChooseCarVC", sender: nil)
         }
     }

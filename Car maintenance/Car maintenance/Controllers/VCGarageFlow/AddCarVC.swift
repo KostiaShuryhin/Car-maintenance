@@ -18,27 +18,18 @@ import Firebase
 class AddCarVC: UIViewController{
 
     var ref: DatabaseReference!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let currentUser = Auth.auth().currentUser
-//              let user = currentUser as? User
-              else {return}
+        self.user = FirebaseService.getCurrentUser()
         
-        if FirebaseService.getUserCarArray(currentUser: currentUser).isEmpty == false {
+        if FirebaseService.getUserCarArray(currentUser: user).isEmpty == false {
             performSegue(withIdentifier: "IdChooseCarVC", sender: nil)
         }
-        
-        
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-////        self.tabBarController?.navigationItem.hidesBackButton = true
-//        self.tabBarController?.navigationItem.backButtonTitle = "SignOUT"
-//    }
-    
+
     func SingOUT() {
     }
     

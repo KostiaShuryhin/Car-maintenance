@@ -12,17 +12,14 @@ var ref: DatabaseReference!
 
 class FirebaseService {
     
-    
-    
-//    static func getCurrentUser () -> () {
-//        guard let currentUser = Auth.auth().currentUser else { return }
-//        let user = User(user: currentUser)
-//        guard self.user = user else {
-//            return
-//        }
-//    }
+    static func getCurrentUser () -> (User) {
+        var user: User!
+        if let currentUser = Auth.auth().currentUser {
+        user = User(user: currentUser)}
+        return user
+        }
 
-    static func getUserCarArray(currentUser: Firebase.User) -> [UserCar] {
+    static func getUserCarArray(currentUser: User) -> [UserCar] {
         var userCars = [UserCar]()
         ref.observe(.value) { snapshot in
 // сдесь может крыться ошибка может нужно weak self в замыкание
@@ -43,6 +40,5 @@ class FirebaseService {
             print(error.localizedDescription)
         }
     }
-
 }
 

@@ -19,7 +19,7 @@ class ChooseCarVC: UIViewController {
 
     var logicKeySega: Bool = false
     var picekerData: String = ""
-    var user: User! = nil
+    var user: User!
     var ref: DatabaseReference!
     var userCars = [UserCar]()
 
@@ -27,15 +27,16 @@ class ChooseCarVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
 
         pickerView.dataSource = self
         pickerView.delegate = self
 
-        guard let currentUser = Auth.auth().currentUser else { return }
-        let user = User(user: currentUser)
-        self.user = user
+        self.user = FirebaseService.getCurrentUser()
+
         ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
-        
+
         if logicKeySega == true {
             performSegue(withIdentifier: "IdSettingsCarTVC", sender: nil)
         }
@@ -43,23 +44,20 @@ class ChooseCarVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        
-//        ref.observe(.value) { [weak self] snapshot in
-//            var userCars = [UserCar]()
-//            for item in snapshot.children {
-//                guard let snapshot = item as? DataSnapshot,
-//                    let userCar = UserCar(snapshot: snapshot) else { continue }
-//                userCars.append(userCar)
-//            }
-        
+
+        self.userCars = FirebaseService.getUserCarArray(currentUser: user)
+
         // может вызвать утечку памяти в замыкании
-        guard let user = user
-              else {
-            return
+
+        if userCars.isEmpty {
+            guard let addCarVC = storyboard?.instantiateViewController(identifier: "AddCarVC") else { return }
+            
+        // MARK: - может не работать без приведения к UIViewController
+            
+            navigationController?.pushViewController(addCarVC, animated: false)
+
         }
-        userCars = FirebaseService.getUserCarArray(currentUser: user)
-        
+
 
     }
 

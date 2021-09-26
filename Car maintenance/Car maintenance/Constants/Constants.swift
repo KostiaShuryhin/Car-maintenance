@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Constants {
+enum Constants {
     enum Segues {
         static let tasks = "tasksSegue"
     }

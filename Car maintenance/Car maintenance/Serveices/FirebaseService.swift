@@ -11,13 +11,33 @@ import Firebase
 var ref: DatabaseReference!
 
 class FirebaseService {
-    
+
     static func getCurrentUser () -> (User) {
         var user: User!
         if let currentUser = Auth.auth().currentUser {
-        user = User(user: currentUser)}
+            user = User(user: currentUser) }
         return user
+    }
+
+    static func checkCarArray(currentUser: User) -> Bool {
+        var booleValu: Bool = false
+
+        ref.child("users/\(currentUser.uid)/userCar").getData { _, DataSnapshot in
+
+            if DataSnapshot.exists() {
+                booleValu = true
+            }
         }
+        return booleValu
+    }
+//    static func checkCarArray () -> Bool {
+//        var booleValu: Bool!
+//
+//        ref.observe(.value) { snapshot in
+//// сдесь может крыться ошибка может нужно weak self в замыкание
+//            booleValu = snapshot.hasChild("userCar")}
+//        return booleValu
+//    }
 
     static func getUserCarArray(currentUser: User) -> [UserCar] {
         var userCars = [UserCar]()
@@ -40,5 +60,6 @@ class FirebaseService {
             print(error.localizedDescription)
         }
     }
+    
 }
 

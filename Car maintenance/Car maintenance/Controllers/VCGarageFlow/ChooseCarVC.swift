@@ -27,7 +27,7 @@ class ChooseCarVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationController?.isNavigationBarHidden = true
 
         pickerView.dataSource = self
@@ -45,15 +45,17 @@ class ChooseCarVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        self.userCars = FirebaseService.getUserCarArray(currentUser: user)
+        if FirebaseService.checkCarArray(currentUser: user) == false {
+            guard let addCarVC = storyboard?.instantiateViewController(identifier: "AddCarVC")
+            else {
+                return userCars = FirebaseService.getUserCarArray(currentUser: user)}
 
-        // может вызвать утечку памяти в замыкании
+            // может вызвать утечку памяти в замыкании
 
-        if userCars.isEmpty {
-            guard let addCarVC = storyboard?.instantiateViewController(identifier: "AddCarVC") else { return }
-            
-        // MARK: - может не работать без приведения к UIViewController
-            
+
+
+            // MARK: - может не работать без приведения к UIViewController
+
             navigationController?.pushViewController(addCarVC, animated: false)
 
         }
@@ -75,7 +77,11 @@ class ChooseCarVC: UIViewController {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return ""
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.removeAllObservers()
+    }
 }
 
 extension ChooseCarVC: ChooseCarVCProtocol, UIPickerViewDataSource, UIPickerViewDelegate {

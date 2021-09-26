@@ -10,8 +10,8 @@ import Firebase
 
 struct UserCar {
 
-    let maker: String?
-    let model: String?
+    let maker: String
+    let model: String
     let carMileage: Int?
     let enginePower: Int?
     let fuel: String?
@@ -20,7 +20,7 @@ struct UserCar {
     let ref: DatabaseReference?
     
     // для создания объекта локально
-    init (maker: String, model: String, carMileage: Int, enginePower: Int?, guel: Int?, fuel: String?, yearOfManufacture: Date?, yearOfPurchase: Date?) {
+    init (maker: String, model: String, carMileage: Int?, enginePower: Int?, guel: Int?, fuel: String?, yearOfManufacture: Date?, yearOfPurchase: Date?) {
         self.maker = maker
         self.model = model
         self.carMileage = carMileage

@@ -25,7 +25,8 @@ class AddCarVC: UIViewController{
         super.viewDidLoad()
         
         self.user = FirebaseService.getCurrentUser()
-        self.userCar = FirebaseService.getUserCarArray(currentUser: user)
+        if FirebaseService.checkCarArray(currentUser: user) == true {
+            self.userCar = FirebaseService.getUserCarArray(currentUser: user)}
         
         if userCar.isEmpty == false {
             performSegue(withIdentifier: "IdChooseCarVC", sender: nil)
@@ -43,6 +44,9 @@ class AddCarVC: UIViewController{
     }
     
    
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.removeAllObservers()
+    }
     
 }

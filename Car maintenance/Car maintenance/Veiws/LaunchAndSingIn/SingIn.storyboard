@@ -76,7 +76,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="registerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cwl-5o-W5l"/>
-                                                    <segue destination="abD-Bq-agW" kind="show" id="Pj1-2U-9IO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -123,31 +122,6 @@
             </objects>
             <point key="canvasLocation" x="1528" y="-146"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0R9-jH-4Oc">
-            <objects>
-                <viewController id="abD-Bq-agW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mpg-RP-Qod">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Это заглушка можно сделать всплывающий алерт" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-w0-Wv7">
-                                <rect key="frame" x="50" y="201" width="251" height="253"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ex3-pd-bYX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="beH-QF-7QU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbT-6E-ywZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1760" y="450.71090047393363"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jhP-5X-P5h">
             <objects>
@@ -171,9 +145,6 @@
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

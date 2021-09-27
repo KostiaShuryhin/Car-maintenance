@@ -13,6 +13,7 @@ class SignInVC: UIViewController {
     var ref: DatabaseReference!
 
 
+
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -45,18 +46,18 @@ class SignInVC: UIViewController {
             displayWarningLabel(warning: "info error, try agane")
             return
         }
-        
+
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
             if let _ = error {
                 self?.displayWarningLabel(warning: "Error ocured")
-            } else  if let _ = user {
+            } else if let _ = user {
                 self?.performSegue(withIdentifier: Constants.Segues.tasks, sender: nil)
                 return
             } else {
                 self?.displayWarningLabel(warning: "such user doesn't exist")
             }
         }
-        
+
     }
 
     @IBAction func registerTapped(_ sender: Any) {
@@ -68,14 +69,20 @@ class SignInVC: UIViewController {
             displayWarningLabel(warning: "Info is incorrect")
             return
         }
-        
+
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] user, error in
             if let error = error {
                 self?.displayWarningLabel(warning: "Registration was incorrect\n\(error.localizedDescription)")
+                print(error.localizedDescription)
             } else {
                 guard let user = user else { return }
                 let userRef = self?.ref.child(user.user.uid)
                 userRef?.setValue(["email": user.user.email])
+
+//                let carRef = Database.database().reference(withPath: "users").child(String(user.user.uid)).child("userCars")
+//                carRef.setValue(["userCar": "nil"])
+
+                // не работает !!!1
             }
         }
     }
@@ -89,5 +96,5 @@ class SignInVC: UIViewController {
             self?.errorLbl.alpha = 0
         }
     }
-    
+
 }

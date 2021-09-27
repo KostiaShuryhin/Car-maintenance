@@ -35,7 +35,7 @@ class ChooseCarVC: UIViewController {
 
         self.user = FirebaseService.getCurrentUser()
 
-        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
+        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCars")
 
         if logicKeySega == true {
             performSegue(withIdentifier: "IdSettingsCarTVC", sender: nil)

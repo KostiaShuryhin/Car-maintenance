@@ -10,8 +10,8 @@ import Firebase
 
 struct UserCar {
 
-    let maker: String
-    let model: String
+    let maker: String?
+    let model: String?
     let carMileage: Int?
     let enginePower: Int?
     let fuel: String?
@@ -19,8 +19,19 @@ struct UserCar {
     let yearOfPurchase: Date?
     let ref: DatabaseReference?
     
+    init() {
+        self.maker = nil
+        self.model = nil
+        self.carMileage = nil
+        self.enginePower = nil
+        self.fuel = nil
+        self.yearOfManufacture = nil
+        self.yearOfPurchase = nil
+        self.ref = nil
+    }
+    
     // для создания объекта локально
-    init (maker: String, model: String, carMileage: Int?, enginePower: Int?, guel: Int?, fuel: String?, yearOfManufacture: Date?, yearOfPurchase: Date?) {
+    init (maker: String?, model: String?, carMileage: Int?, enginePower: Int?, guel: Int?, fuel: String?, yearOfManufacture: Date?, yearOfPurchase: Date?) {
         self.maker = maker
         self.model = model
         self.carMileage = carMileage
@@ -34,8 +45,8 @@ struct UserCar {
     // для создания объекта из сети
     init? (snapshot: DataSnapshot) {
         guard let snapshotValu = snapshot.value as? [String: Any],
-            let maker = snapshotValu[Constants.makerKey] as? String,
-            let model = snapshotValu[Constants.modelKey] as? String,
+            let maker = snapshotValu[Constants.makerKey] as? String?,
+            let model = snapshotValu[Constants.modelKey] as? String?,
             let carMileage = snapshotValu[Constants.carMileageKey] as? Int?,
             let enginePower = snapshotValu[Constants.enginePowerKey] as? Int?,
             let fuel = snapshotValu[Constants.fuelKey] as? String?,
@@ -53,8 +64,8 @@ struct UserCar {
     }
 
     func convertToDictionary() -> [String: Any] {
-        [Constants.makerKey: maker,
-            Constants.modelKey: model,
+        [Constants.makerKey: maker ?? nil,
+            Constants.modelKey: model ?? nil,
             Constants.carMileageKey: carMileage ?? nil,
             Constants.enginePowerKey: enginePower ?? nil,
             Constants.fuelKey: fuel ?? nil,

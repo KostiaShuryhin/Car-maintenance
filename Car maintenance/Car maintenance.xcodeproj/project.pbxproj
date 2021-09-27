@@ -27,7 +27,7 @@
 		B5BA966F26EF9C5E002BF186 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */; };
 		B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C766ED26EF6EBB00EAD2D9 /* User.swift */; };
 		B5E1090D26EE5986006B50AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1090C26EE5986006B50AE /* Constants.swift */; };
-		B5E4C86326F782A9004ABDC0 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4C86226F782A9004ABDC0 /* Cars.swift */; };
+		B5E4C86326F782A9004ABDC0 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4C86226F782A9004ABDC0 /* Car.swift */; };
 		B5F2ADCA26F4BD990036E5AB /* AddCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADC926F4BD990036E5AB /* AddCarVC.swift */; };
 		B5F2ADCC26F4BDEF0036E5AB /* ChooseCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADCB26F4BDEF0036E5AB /* ChooseCarVC.swift */; };
 		B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2ADCD26F4BE500036E5AB /* SettingsCarTVC.swift */; };
@@ -55,7 +55,7 @@
 		B59EDEF626FA22C80005C390 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B5C766ED26EF6EBB00EAD2D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5E1090C26EE5986006B50AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B5E4C86226F782A9004ABDC0 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
+		B5E4C86226F782A9004ABDC0 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		B5F2ADC926F4BD990036E5AB /* AddCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarVC.swift; sourceTree = "<group>"; };
 		B5F2ADCB26F4BDEF0036E5AB /* ChooseCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCarVC.swift; sourceTree = "<group>"; };
 		B5F2ADCD26F4BE500036E5AB /* SettingsCarTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCarTVC.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C766ED26EF6EBB00EAD2D9 /* User.swift */,
-				B5E4C86226F782A9004ABDC0 /* Cars.swift */,
+				B5E4C86226F782A9004ABDC0 /* Car.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */,
 				B59EDEF326F904940005C390 /* vcvc.swift in Sources */,
 				B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */,
-				B5E4C86326F782A9004ABDC0 /* Cars.swift in Sources */,
+				B5E4C86326F782A9004ABDC0 /* Car.swift in Sources */,
 				B5F2ADCC26F4BDEF0036E5AB /* ChooseCarVC.swift in Sources */,
 				B57EA3CC26F8C2FF00B439DA /* CellCarSettingsTVC.swift in Sources */,
 				B5F2ADD026F4BF470036E5AB /* CarModelOrManufacturerTVC.swift in Sources */,

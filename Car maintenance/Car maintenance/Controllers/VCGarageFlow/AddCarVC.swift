@@ -46,7 +46,7 @@ class AddCarVC: UIViewController{
    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        ref.removeAllObservers()
+        ref?.removeAllObservers()
     }
     
 }

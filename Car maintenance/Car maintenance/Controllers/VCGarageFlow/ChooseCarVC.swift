@@ -23,45 +23,38 @@ class ChooseCarVC: UIViewController {
     var ref: DatabaseReference!
     var userCars = [UserCar]()
 
-    @IBOutlet weak var pickerView: UIPickerView!
-
+    @IBOutlet weak var pickerVeiw: UIPickerView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
 
-        pickerView.dataSource = self
-        pickerView.delegate = self
+
+//        if logicKeySega {
+//            performSegue(withIdentifier: Constants.Segues.settingsCarIsEmpty, sender: nil)
+//        }
+        
+        pickerVeiw.dataSource = self
+        pickerVeiw.delegate = self
 
         self.user = FirebaseService.getCurrentUser()
 
         ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCars")
-
-        if logicKeySega == true {
-            performSegue(withIdentifier: "IdSettingsCarTVC", sender: nil)
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        // может сделать переход на main ???
+        
         if FirebaseService.checkCarArray(currentUser: user) == false {
-            guard let addCarVC = storyboard?.instantiateViewController(identifier: "AddCarVC")
-            else {
+            navigationController?.popViewController(animated: true)
+        } else {
                 return userCars = FirebaseService.getUserCarArray(currentUser: user)}
-
-            // может вызвать утечку памяти в замыкании
-
-
-
-            // MARK: - может не работать без приведения к UIViewController
-
-            navigationController?.pushViewController(addCarVC, animated: false)
-
         }
-
-
-    }
+    
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         let componentsInPicerView: Int = 1
@@ -78,11 +71,11 @@ class ChooseCarVC: UIViewController {
         return ""
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        ref.removeAllObservers()
+    override func viewDidDisappear(_ animated: Bool) {
+        ref?.removeAllObservers()
     }
 }
+
 
 extension ChooseCarVC: ChooseCarVCProtocol, UIPickerViewDataSource, UIPickerViewDelegate {
 

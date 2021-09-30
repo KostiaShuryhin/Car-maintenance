@@ -105,7 +105,7 @@
                         <outlet property="emailTF" destination="3ZT-0q-W0o" id="ZBO-B0-qEb"/>
                         <outlet property="errorLbl" destination="PJV-md-pwa" id="0wz-pN-pzY"/>
                         <outlet property="passwordTF" destination="8FI-Kj-oIG" id="l9b-Ph-9Lw"/>
-                        <segue destination="7l0-Js-NOo" kind="show" identifier="tasksSegue" id="ZVR-1S-GwU"/>
+                        <segue destination="7l0-Js-NOo" kind="show" identifier="mainView" id="ZVR-1S-GwU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -120,7 +120,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QA-fg-MQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="-146"/>
+            <point key="canvasLocation" x="1531" y="-149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jhP-5X-P5h">

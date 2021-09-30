@@ -25,10 +25,10 @@ class SignInVC: UIViewController {
         ref = Database.database().reference(withPath: "users")
 
         // MARK: - !!! нужно если у нас еще есть действующий user то сделаем переход
-//        Auth.auth().addStateDidChangeListener { [weak self] _, user in
-//            guard let _ = user else { return }
-//            self?.performSegue(withIdentifier: Constants.Segues.tasks, sender: nil)
-//        }
+        Auth.auth().addStateDidChangeListener { [weak self] _, user in
+            guard let _ = user else { return }
+            self?.performSegue(withIdentifier: Constants.Segues.mainView, sender: nil)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +51,7 @@ class SignInVC: UIViewController {
             if let _ = error {
                 self?.displayWarningLabel(warning: "Error ocured")
             } else if let _ = user {
-                self?.performSegue(withIdentifier: Constants.Segues.tasks, sender: nil)
+                self?.performSegue(withIdentifier: Constants.Segues.mainView, sender: nil)
                 return
             } else {
                 self?.displayWarningLabel(warning: "such user doesn't exist")
@@ -78,9 +78,6 @@ class SignInVC: UIViewController {
                 guard let user = user else { return }
                 let userRef = self?.ref.child(user.user.uid)
                 userRef?.setValue(["email": user.user.email])
-
-//                let carRef = Database.database().reference(withPath: "users").child(String(user.user.uid)).child("userCars")
-//                carRef.setValue(["userCar": "nil"])
 
                 // не работает !!!1
             }

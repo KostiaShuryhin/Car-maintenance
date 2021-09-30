@@ -9,7 +9,10 @@ import Foundation
 
 enum Constants {
     enum Segues {
-        static let tasks = "tasksSegue"
+        static let mainView = "mainView"
+        static let addMyCar = "IdAddMyCar"
+        static let userCarIsNotEmpty = "userCarIsNotEmptySegua"
+        static let settingsCarIsEmpty = "settingsCarIsEmpty"
     }
     enum NumberOfMenuSectionTVC {
         static let InSettingsCarTVC: Int = 3

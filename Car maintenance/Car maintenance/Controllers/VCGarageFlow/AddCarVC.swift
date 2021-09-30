@@ -29,24 +29,34 @@ class AddCarVC: UIViewController{
             self.userCar = FirebaseService.getUserCarArray(currentUser: user)}
         
         if userCar.isEmpty == false {
-            performSegue(withIdentifier: "IdChooseCarVC", sender: nil)
+            performSegue(withIdentifier: Constants.Segues.userCarIsNotEmpty, sender: nil)
         }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     func SingOUT() {
     }
     
     @IBAction func addCarBotton(_ sender: Any) {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let destVC = segue.destination as? ChooseCarVC else { return }
-            destVC.logicKeySega = true
-        }
+        performSegue(withIdentifier: "userCarIsNotEmptySegua", sender: nil)
     }
     
-   
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destVC = segue.destination as? ChooseCarVC else { return }
+        destVC.logicKeySega = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         ref?.removeAllObservers()
     }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        ref?.removeAllObservers()
+//    }
     
 }

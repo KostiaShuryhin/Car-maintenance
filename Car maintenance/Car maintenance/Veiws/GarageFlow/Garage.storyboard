@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AddMyCar" id="Y6W-OH-hqX" customClass="AddCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdAddMyCar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AddCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="addCarBotton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KeE-KP-Knq"/>
-                                    <segue destination="zRw-GZ-ZAI" kind="show" id="N83-us-qZj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +46,10 @@
                         <barButtonItem key="rightBarButtonItem" title="SingOUT" id="X3w-NE-619"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="zRw-GZ-ZAI" kind="show" identifier="userCarIsNotEmptySegua" id="ag8-qL-KSU"/>
+                        <segue destination="17J-y2-rIP" kind="show" id="d12-ik-mgm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +58,7 @@
         <!--Choose CarVC-->
         <scene sceneID="hUt-c9-fx6">
             <objects>
-                <viewController storyboardIdentifier="IdChooseCarVC" id="zRw-GZ-ZAI" customClass="ChooseCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdChooseCar" id="zRw-GZ-ZAI" customClass="ChooseCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbH-Hd-wRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,21 +79,17 @@
                     <navigationItem key="navigationItem" id="Y2c-9Q-JFC">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="WK6-dC-L5l"/>
-                            <barButtonItem systemItem="edit" id="aef-SC-c8d">
-                                <connections>
-                                    <segue destination="17J-y2-rIP" kind="show" id="Ny5-Nf-d4f"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="aef-SC-c8d"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="pickerView" destination="733-xf-DeW" id="fgf-wL-lBe"/>
-                        <segue destination="17J-y2-rIP" kind="show" id="39F-Pw-McM"/>
+                        <outlet property="pickerVeiw" destination="733-xf-DeW" id="Fmp-Ce-GQu"/>
+                        <segue destination="17J-y2-rIP" kind="show" identifier="settingsCarIsEmpty" id="39F-Pw-McM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcA-dv-LTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2719" y="72"/>
+            <point key="canvasLocation" x="2714" y="523"/>
         </scene>
         <!--Settings CarTVC-->
         <scene sceneID="W8Q-wL-kOB">
@@ -243,7 +242,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNe-27-Pke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3589.8550724637685" y="71.651785714285708"/>
+            <point key="canvasLocation" x="3520" y="72"/>
         </scene>
         <!--Car Model Or ManufacturerTVC-->
         <scene sceneID="obK-Y0-WAJ">
@@ -285,7 +284,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ny5-Nf-d4f"/>
+        <segue reference="39F-Pw-McM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

@@ -13,6 +13,7 @@ enum Constants {
         static let addMyCar = "IdAddMyCar"
         static let userCarIsNotEmpty = "userCarIsNotEmptySegua"
         static let settingsCarIsEmpty = "settingsCarIsEmpty"
+        static let createUserCar = "createUserCar"
     }
     enum NumberOfMenuSectionTVC {
         static let InSettingsCarTVC: Int = 3

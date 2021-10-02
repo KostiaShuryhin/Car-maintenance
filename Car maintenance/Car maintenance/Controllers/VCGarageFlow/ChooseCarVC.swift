@@ -17,7 +17,7 @@ protocol ChooseCarVCProtocol {
 
 class ChooseCarVC: UIViewController {
 
-    var logicKeySega: Bool = false
+//    var logicKeySega: Bool = false
     var picekerData: String = ""
     var user: User!
     var ref: DatabaseReference!
@@ -47,7 +47,10 @@ class ChooseCarVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        // может сделать переход на main ???
+  
+            // MARK: - првоерить нижнию навигацию!! проблема
+//        с is inition. может сделать проверку и перетянуть его через код? или через навигатион контроллер
+        
         
         if FirebaseService.checkCarArray(currentUser: user) == false {
             navigationController?.popViewController(animated: true)
@@ -55,7 +58,7 @@ class ChooseCarVC: UIViewController {
                 return userCars = FirebaseService.getUserCarArray(currentUser: user)}
         }
     
-
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         let componentsInPicerView: Int = 1
         return componentsInPicerView
@@ -64,11 +67,12 @@ class ChooseCarVC: UIViewController {
     // MARK: - обязательно поправь пикер
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        return userCars.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ""
+        picekerData = "\(String(describing: userCars[row].maker)) \(userCars[row].model ?? "plese add maker and model")"
+        return picekerData
     }
     
     override func viewDidDisappear(_ animated: Bool) {

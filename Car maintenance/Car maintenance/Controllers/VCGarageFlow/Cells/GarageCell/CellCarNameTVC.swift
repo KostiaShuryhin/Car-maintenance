@@ -8,7 +8,10 @@
 import UIKit
 
 class CellCarNameTVC: UITableViewCell {
-
+    
+    @IBOutlet weak var titleOfCell: UILabel!
+    @IBOutlet weak var itemeOfCell: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

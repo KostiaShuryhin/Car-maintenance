@@ -42,12 +42,13 @@ class AddCarVC: UIViewController{
     }
     
     @IBAction func addCarBotton(_ sender: Any) {
-        performSegue(withIdentifier: "userCarIsNotEmptySegua", sender: nil)
+//        performSegue(withIdentifier: Constants.Segues.userCarIsNotEmpty, sender: nil)
+        performSegue(withIdentifier: Constants.Segues.createUserCar, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destVC = segue.destination as? ChooseCarVC else { return }
-        destVC.logicKeySega = true
+//        guard let destVC = segue.destination as? ChooseCarVC else { return }
+//        destVC.logicKeySega = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {

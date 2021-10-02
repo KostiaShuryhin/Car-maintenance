@@ -48,7 +48,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="zRw-GZ-ZAI" kind="show" identifier="userCarIsNotEmptySegua" id="ag8-qL-KSU"/>
-                        <segue destination="17J-y2-rIP" kind="show" id="d12-ik-mgm"/>
+                        <segue destination="17J-y2-rIP" kind="show" identifier="createUserCar" id="d12-ik-mgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcA-dv-LTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="523"/>
+            <point key="canvasLocation" x="2686" y="-281"/>
         </scene>
         <!--Settings CarTVC-->
         <scene sceneID="W8Q-wL-kOB">
@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2LblImage" id="cpI-hT-ng9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2LblImage" id="cpI-hT-ng9" customClass="CellCarNameTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cpI-hT-ng9" id="UFf-qk-pfs">
@@ -148,6 +148,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="itemeOfCell" destination="HfL-cO-EBu" id="PMs-Eq-trH"/>
+                                    <outlet property="titleOfCell" destination="T2j-C7-EtA" id="A1x-oa-IdP"/>
                                     <segue destination="kwz-jn-1ZM" kind="show" id="blM-l0-oqa"/>
                                 </connections>
                             </tableViewCell>
@@ -242,7 +244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNe-27-Pke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3520" y="72"/>
+            <point key="canvasLocation" x="3533" y="72"/>
         </scene>
         <!--Car Model Or ManufacturerTVC-->
         <scene sceneID="obK-Y0-WAJ">
@@ -284,7 +286,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="39F-Pw-McM"/>
+        <segue reference="d12-ik-mgm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

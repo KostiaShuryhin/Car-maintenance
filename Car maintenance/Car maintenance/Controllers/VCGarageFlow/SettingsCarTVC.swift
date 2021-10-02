@@ -10,20 +10,20 @@ import Firebase
 
 class SettingsCarTVC: UITableViewController {
 
-//    let user: User! = nil
-//    var ref: DatabaseReference! = nil
-//    let userCar = [UserCar]()
+    var user: User!
+    var ref: DatabaseReference!
+    var userCars = [UserCar]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        guard let currentUser = Auth.auth().currentUser else { return }
-//        let user = User(user: currentUser)
-//        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCar")
+        guard let currentUser = Auth.auth().currentUser else { return }
+        let user = User(user: currentUser)
+        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCars")
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return Constants.NumberOfMenuSectionTVC.InSettingsCarTVC
     }

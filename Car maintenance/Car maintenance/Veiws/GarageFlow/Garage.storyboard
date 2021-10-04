@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2LblImage" id="cpI-hT-ng9" customClass="CellCarNameTVC" customModule="Car_maintenance" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCarName" id="cpI-hT-ng9" customClass="CellCarNameTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cpI-hT-ng9" id="UFf-qk-pfs">
@@ -148,12 +148,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="itemeOfCell" destination="HfL-cO-EBu" id="PMs-Eq-trH"/>
-                                    <outlet property="titleOfCell" destination="T2j-C7-EtA" id="A1x-oa-IdP"/>
+                                    <outlet property="itemLbl" destination="HfL-cO-EBu" id="twN-ck-wl6"/>
+                                    <outlet property="titleLbl" destination="T2j-C7-EtA" id="Ros-23-qSs"/>
                                     <segue destination="kwz-jn-1ZM" kind="show" id="blM-l0-oqa"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2Lbl" id="Ku3-iK-SJD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2Lbl" id="Ku3-iK-SJD" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.000001907348633" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ku3-iK-SJD" id="IeO-NF-jOj">
@@ -192,8 +192,12 @@
                                         <constraint firstItem="bpj-E4-RsD" firstAttribute="centerY" secondItem="IeO-NF-jOj" secondAttribute="centerY" id="eXw-jF-5Yc"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="parametrLbl" destination="gIF-7E-yBr" id="0uy-vP-v5A"/>
+                                    <outlet property="titleLbl" destination="0ve-2D-8x4" id="0mk-hN-XE9"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kFc-Lh-nC9" userLabel="CellButtons">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kFc-Lh-nC9" userLabel="CellButtons" customClass="CellButtonTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="111.66666984558105" width="414" height="40.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kFc-Lh-nC9" id="mW3-gD-PfP">
@@ -209,6 +213,9 @@
                                                     <state key="normal" title="Удалить">
                                                         <color key="titleColor" systemColor="systemRedColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="delCarBtn:" destination="kFc-Lh-nC9" eventType="touchUpInside" id="9q4-3T-RZK"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-eC-olT">
                                                     <rect key="frame" x="197" y="0.0" width="187" height="30.333333333333332"/>
@@ -216,6 +223,9 @@
                                                     <state key="normal" title="Сохранить">
                                                         <color key="titleColor" systemColor="systemGreenColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="saveCarSettingsBtn:" destination="kFc-Lh-nC9" eventType="touchUpInside" id="MH9-ej-W8w"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

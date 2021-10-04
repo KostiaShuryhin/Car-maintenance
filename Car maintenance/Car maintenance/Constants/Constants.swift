@@ -15,13 +15,31 @@ enum Constants {
         static let settingsCarIsEmpty = "settingsCarIsEmpty"
         static let createUserCar = "createUserCar"
     }
-    enum NumberOfMenuSectionTVC {
-        static let InSettingsCarTVC: Int = 3
+}
+
+enum ConstGarageFlow{
+    
+    enum AmountSection {
+        static let settingsTVC: Int = 3
+        static let descriptionTVC: Int = 1
     }
-     
-    enum CountOfCellsInSectionInTVCSettingsCar {
-        static let sectionCarName: Int = 2
-        static let sectionSettings: Int = 6
-        static let sectionButtons: Int = 1
+// MARK: - заменить в коде кол. элементов в массиве
+//    enum CountOfCellsInSectionInTVCSettingsCar {
+//        static let sectionCarName: Int = 2
+//        static let sectionSettings: Int = 6
+//        static let sectionButtons: Int = 1
+//    }
+    
+    enum CarNameCellDataRow: String, CaseIterable  {
+        case manufacturer = "Марка"
+        case model = "Модель" }
+    
+    enum SettingsCarCellDataRow: String, CaseIterable {
+        case carName = "Название"
+        case mileage = "Пробег"
+        case power = "Мощнасть"
+        case fulel = "Вид топлива"
+        case yearOfManufacture = "Год выпуска"
+        case yearOfPurchase = "Дата покупки"
     }
 }

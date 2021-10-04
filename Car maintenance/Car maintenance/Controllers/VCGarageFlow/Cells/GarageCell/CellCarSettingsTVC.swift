@@ -8,6 +8,10 @@
 import UIKit
 
 class CellCarSettingsTVC: UITableViewCell {
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var parametrLbl: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

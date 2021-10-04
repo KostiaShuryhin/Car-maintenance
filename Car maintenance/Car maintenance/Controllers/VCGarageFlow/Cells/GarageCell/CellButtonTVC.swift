@@ -9,6 +9,14 @@ import UIKit
 
 class CellButtonTVC: UITableViewCell {
 
+    
+    @IBAction func delCarBtn(_ sender: Any) {
+    }
+    
+    @IBAction func saveCarSettingsBtn(_ sender: Any) {
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

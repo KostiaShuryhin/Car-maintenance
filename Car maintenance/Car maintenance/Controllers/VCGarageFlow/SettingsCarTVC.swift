@@ -38,15 +38,27 @@ class SettingsCarTVC: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+            
+        let section = self.tableView.numberOfSections
+        if section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as? CellCarNameTVC
+            let dataArray = Constants.CellGarageFlowCarNameDataRow.allCases.enumerated()
+            
+            cell?.titleLbl.text = dataArray[indexPath.row]
+        }
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath)
+//
+//
+//        cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+//        return cell
 
-
-        // Configure the cell...
-
-        return cell
     }
 
-
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! CellCarNameTVC
+//        // Configure the cell...
+//        cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+//        return cell
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

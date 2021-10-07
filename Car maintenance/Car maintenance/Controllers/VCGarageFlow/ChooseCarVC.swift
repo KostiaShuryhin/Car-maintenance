@@ -41,7 +41,7 @@ class ChooseCarVC: UIViewController {
 
         self.user = FirebaseService.getCurrentUser()
 
-        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("userCars")
+        ref = Database.database().reference(withPath: Constants.FireBase.users).child(String(user.uid)).child(Constants.FireBase.userCars)
     }
 
     override func viewWillAppear(_ animated: Bool) {

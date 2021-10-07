@@ -15,6 +15,12 @@ enum Constants {
         static let settingsCarIsEmpty = "settingsCarIsEmpty"
         static let createUserCar = "createUserCar"
     }
+    
+    enum FireBase {
+        static let users = "users"
+        static let user = "user"
+        static let userCars = "userCars"
+    }
 }
 
 enum ConstGarageFlow{
@@ -41,5 +47,11 @@ enum ConstGarageFlow{
         case fulel = "Вид топлива"
         case yearOfManufacture = "Год выпуска"
         case yearOfPurchase = "Дата покупки"
+    }
+    enum ButtonCellAmount {
+        static let oneCell = 1
+    }
+    
+    enum DescriprionCellDataRow {
     }
 }

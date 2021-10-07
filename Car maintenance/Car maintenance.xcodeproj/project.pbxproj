@@ -11,12 +11,8 @@
 		B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC7C126EE1C0D000B72FE /* SceneDelegate.swift */; };
 		B52AC7C926EE1C0F000B72FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7C826EE1C0F000B72FE /* Assets.xcassets */; };
 		B52AC7CC26EE1C0F000B72FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7CA26EE1C0F000B72FE /* LaunchScreen.storyboard */; };
-		B52AC7DD26EE1E2D000B72FE /* SingIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7DC26EE1E2D000B72FE /* SingIn.storyboard */; };
 		B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC7DE26EE1E62000B72FE /* SignInVC.swift */; };
 		B52AC7E126EE1FCB000B72FE /* MainVeiw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */; };
-		B52AC7E326EE2005000B72FE /* Garage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E226EE2005000B72FE /* Garage.storyboard */; };
-		B52AC7E526EE2049000B72FE /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E426EE2049000B72FE /* Statistics.storyboard */; };
-		B52AC7E726EE209B000B72FE /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E626EE209B000B72FE /* Maintenance.storyboard */; };
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
 		B57EA3CA26F8C2C300B439DA /* CellCarNameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */; };
 		B57EA3CC26F8C2FF00B439DA /* CellCarSettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */; };
@@ -41,12 +37,8 @@
 		B52AC7C826EE1C0F000B72FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52AC7CB26EE1C0F000B72FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B52AC7CD26EE1C0F000B72FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B52AC7DC26EE1E2D000B72FE /* SingIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingIn.storyboard; sourceTree = "<group>"; };
 		B52AC7DE26EE1E62000B72FE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVeiw.storyboard; sourceTree = "<group>"; };
-		B52AC7E226EE2005000B72FE /* Garage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Garage.storyboard; sourceTree = "<group>"; };
-		B52AC7E426EE2049000B72FE /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
-		B52AC7E626EE209B000B72FE /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maintenance.storyboard; sourceTree = "<group>"; };
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarNameTVC.swift; sourceTree = "<group>"; };
 		B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarSettingsTVC.swift; sourceTree = "<group>"; };
@@ -140,11 +132,8 @@
 		B52AC7D626EE1C6E000B72FE /* Veiws */ = {
 			isa = PBXGroup;
 			children = (
+				B52AC7CA26EE1C0F000B72FE /* LaunchScreen.storyboard */,
 				B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */,
-				B52AC7E826EE20CE000B72FE /* GarageFlow */,
-				B52AC7E926EE20F0000B72FE /* StatisticsFlow */,
-				B52AC7EA26EE210F000B72FE /* MaintenanceFlow */,
-				B52AC7DB26EE1DEA000B72FE /* LaunchAndSingIn */,
 			);
 			path = Veiws;
 			sourceTree = "<group>";
@@ -172,39 +161,6 @@
 				B59EDEF626FA22C80005C390 /* FirebaseService.swift */,
 			);
 			path = Serveices;
-			sourceTree = "<group>";
-		};
-		B52AC7DB26EE1DEA000B72FE /* LaunchAndSingIn */ = {
-			isa = PBXGroup;
-			children = (
-				B52AC7CA26EE1C0F000B72FE /* LaunchScreen.storyboard */,
-				B52AC7DC26EE1E2D000B72FE /* SingIn.storyboard */,
-			);
-			path = LaunchAndSingIn;
-			sourceTree = "<group>";
-		};
-		B52AC7E826EE20CE000B72FE /* GarageFlow */ = {
-			isa = PBXGroup;
-			children = (
-				B52AC7E226EE2005000B72FE /* Garage.storyboard */,
-			);
-			path = GarageFlow;
-			sourceTree = "<group>";
-		};
-		B52AC7E926EE20F0000B72FE /* StatisticsFlow */ = {
-			isa = PBXGroup;
-			children = (
-				B52AC7E426EE2049000B72FE /* Statistics.storyboard */,
-			);
-			path = StatisticsFlow;
-			sourceTree = "<group>";
-		};
-		B52AC7EA26EE210F000B72FE /* MaintenanceFlow */ = {
-			isa = PBXGroup;
-			children = (
-				B52AC7E626EE209B000B72FE /* Maintenance.storyboard */,
-			);
-			path = MaintenanceFlow;
 			sourceTree = "<group>";
 		};
 		B52AC7EB26EE215E000B72FE /* VCMaintenanceFlow */ = {
@@ -332,12 +288,8 @@
 			files = (
 				B52AC7CC26EE1C0F000B72FE /* LaunchScreen.storyboard in Resources */,
 				B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */,
-				B52AC7E326EE2005000B72FE /* Garage.storyboard in Resources */,
 				B52AC7C926EE1C0F000B72FE /* Assets.xcassets in Resources */,
 				B52AC7E126EE1FCB000B72FE /* MainVeiw.storyboard in Resources */,
-				B52AC7DD26EE1E2D000B72FE /* SingIn.storyboard in Resources */,
-				B52AC7E726EE209B000B72FE /* Maintenance.storyboard in Resources */,
-				B52AC7E526EE2049000B72FE /* Statistics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

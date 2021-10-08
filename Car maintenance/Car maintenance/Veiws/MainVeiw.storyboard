@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Топливо-->
         <scene sceneID="t7Z-Vd-qoz">
             <objects>
                 <viewController id="eIA-fp-LuJ" sceneMemberID="viewController">
@@ -17,15 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="P9V-mA-Ppk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="GYM-bl-NZg"/>
+                    <tabBarItem key="tabBarItem" title="Топливо" image="GasIcon" selectedImage="GasIcon" id="GYM-bl-NZg">
+                        <color key="badgeColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiD-nL-ZIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="728" y="65"/>
         </scene>
-        <!--Item 1-->
+        <!--Сервис-->
         <scene sceneID="acn-lG-pOu">
             <objects>
                 <viewController id="HtJ-Mn-2Hx" sceneMemberID="viewController">
@@ -35,7 +37,9 @@
                         <viewLayoutGuide key="safeArea" id="3fT-3Y-58N"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="qxr-fQ-6Aq"/>
+                    <tabBarItem key="tabBarItem" title="Сервис" image="ServiseIcone" selectedImage="ServiseIcone" id="qxr-fQ-6Aq">
+                        <color key="badgeColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gU-ph-e9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,12 +53,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bwK-sU-Nkf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HtJ-Mn-2Hx" kind="relationship" relationship="viewControllers" id="qMC-Il-6rG"/>
-                        <segue destination="eIA-fp-LuJ" kind="relationship" relationship="viewControllers" id="GkG-MI-npT"/>
-                        <segue destination="kt4-tj-Nby" kind="relationship" relationship="viewControllers" id="Epo-ti-c1A"/>
+                        <segue destination="kt4-tj-Nby" kind="relationship" relationship="viewControllers" id="OFT-FX-bH9"/>
+                        <segue destination="HtJ-Mn-2Hx" kind="relationship" relationship="viewControllers" id="5pp-Qs-zuD"/>
+                        <segue destination="eIA-fp-LuJ" kind="relationship" relationship="viewControllers" id="cBm-dW-uxl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44o-zM-66t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-9q-afN" userLabel="Main Stack View">
-                                <rect key="frame" x="30" y="188" width="354" height="402.5"/>
+                                <rect key="frame" x="30" y="240" width="354" height="402.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Maintenance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-VR-Szs">
                                         <rect key="frame" x="102.5" y="0.0" width="149" height="24"/>
@@ -169,11 +175,24 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LEd-dE-Xgd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z4E-AJ-f2W">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="z4E-AJ-f2W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zfG-Gv-UFI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="bCn-Kt-vqA" kind="relationship" relationship="rootViewController" id="CBR-cv-lgU"/>
                     </connections>
@@ -182,7 +201,7 @@
             </objects>
             <point key="canvasLocation" x="-2313" y="-460"/>
         </scene>
-        <!--Item 1-->
+        <!--Гараж-->
         <scene sceneID="GHc-ki-3kN">
             <objects>
                 <viewController id="kt4-tj-Nby" customClass="AddCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-eg-KuD">
-                                <rect key="frame" x="57" y="300.5" width="300" height="300"/>
+                                <rect key="frame" x="57" y="326.5" width="300" height="300"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -211,7 +230,9 @@
                             <constraint firstItem="8Za-eg-KuD" firstAttribute="centerX" secondItem="aKV-lh-WDY" secondAttribute="centerX" id="vDK-Op-tDt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="5qM-iY-WX5"/>
+                    <tabBarItem key="tabBarItem" title="Гараж" image="GarageIcon" selectedImage="GarageIcon" id="5qM-iY-WX5">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                     <connections>
                         <segue destination="azZ-oq-N52" kind="show" identifier="userCarIsNotEmptySegua" id="zD4-7e-Bvo"/>
                         <segue destination="Fzp-rm-eDz" kind="show" identifier="createUserCar" id="eQA-vg-OPG"/>
@@ -230,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-iD-xxw">
-                                <rect key="frame" x="50" y="367" width="314" height="216"/>
+                                <rect key="frame" x="50" y="393" width="314" height="216"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                         </subviews>
@@ -460,13 +481,13 @@
         <segue reference="eQA-vg-OPG"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="GarageIcon" width="32" height="32"/>
+        <image name="GasIcon" width="32" height="34"/>
+        <image name="ServiseIcone" width="32" height="32"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -478,6 +499,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

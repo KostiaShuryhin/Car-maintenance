@@ -49,26 +49,26 @@ class SettingsCarTVC: UITableViewController {
 
         let section = self.tableView.numberOfSections
 //        let section = indexPath.section
-//        var cell: UITableViewCell?
+        var cell: UITableViewCell!
 
         if section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as? CellCarNameTVC else { return }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as! CellCarNameTVC
 
-                var dataArray = [String]()
-                let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
+            var dataArray = [String]()
+            let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
 
-                for item in arrayEnumTipe {
-                    let itemString = item.rawValue
-                    dataArray.append(itemString)
-                }
-            
-            return cell
+            for item in arrayEnumTipe {
+                let itemString = item.rawValue
+                dataArray.append(itemString)
             }
-            
+
+            return cell
         }
+        return cell
+    }
 
 //        return cell
-    }
+}
 
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath)
 //
@@ -77,8 +77,8 @@ class SettingsCarTVC: UITableViewController {
 //        return cell
 
 
-    // MARK: - Navigation
-    /*
+// MARK: - Navigation
+/*
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,4 +87,5 @@ class SettingsCarTVC: UITableViewController {
     }
     */
 
-}
+
+

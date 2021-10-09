@@ -25,7 +25,6 @@ class ChooseCarVC: UIViewController {
 
     @IBOutlet weak var pickerVeiw: UIPickerView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

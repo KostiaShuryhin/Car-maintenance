@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5065B392711AAB8007D0917 /* EnumArrayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5065B382711AAB8007D0917 /* EnumArrayService.swift */; };
 		B52AC7C026EE1C0D000B72FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC7BF26EE1C0D000B72FE /* AppDelegate.swift */; };
 		B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC7C126EE1C0D000B72FE /* SceneDelegate.swift */; };
 		B52AC7C926EE1C0F000B72FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7C826EE1C0F000B72FE /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5065B382711AAB8007D0917 /* EnumArrayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumArrayService.swift; sourceTree = "<group>"; };
 		B52AC7BC26EE1C0D000B72FE /* Car maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52AC7BF26EE1C0D000B72FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52AC7C126EE1C0D000B72FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				B59EDEF626FA22C80005C390 /* FirebaseService.swift */,
+				B5065B382711AAB8007D0917 /* EnumArrayService.swift */,
 			);
 			path = Serveices;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
 				B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */,
 				B59EDEF326F904940005C390 /* vcvc.swift in Sources */,
+				B5065B392711AAB8007D0917 /* EnumArrayService.swift in Sources */,
 				B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */,
 				B5E4C86326F782A9004ABDC0 /* Car.swift in Sources */,
 				B5F2ADCC26F4BDEF0036E5AB /* ChooseCarVC.swift in Sources */,

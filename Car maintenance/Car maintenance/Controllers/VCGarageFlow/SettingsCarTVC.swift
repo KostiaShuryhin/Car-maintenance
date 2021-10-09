@@ -53,13 +53,13 @@ class SettingsCarTVC: UITableViewController {
 
         if section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as! CellCarNameTVC
-
-            var dataArray = [String]()
-            let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
-
-            for item in arrayEnumTipe {
-                let itemString = item.rawValue
-                dataArray.append(itemString)
+//
+//            var dataArray = [String]()
+//            let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
+//
+//            for item in arrayEnumTipe {
+//                let itemString = item.rawValue
+//                dataArray.append(itemString)
             }
 
             return cell

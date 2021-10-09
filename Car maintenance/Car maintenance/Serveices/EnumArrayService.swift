@@ -17,8 +17,8 @@ struct EnumArraySercice {
             for item in arrayEnumTipe {
                 let itemString: String = item.rawValue
                 dataArray.append(itemString)
-                return dataArray
             }
+            return dataArray
         }
     }
 
@@ -30,8 +30,8 @@ struct EnumArraySercice {
             for item in arrayEnumTipe {
                 let itemString: String = item.rawValue
                 dataArray.append(itemString)
-                return dataArray
             }
+            return dataArray
         }
     }
 }

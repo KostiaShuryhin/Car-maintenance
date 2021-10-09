@@ -26,55 +26,58 @@ class SettingsCarTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return ConstGarageFlow.AmountSection.descriptionTVC
+        return ConstGarageFlow.AmountSection.settingsTVC
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         var rowsInSection: Int = 0
 
-        if section == 0 {
+        switch section {
+        case 0:
             rowsInSection = ConstGarageFlow.CarNameCellDataRow.allCases.count
-            if section == 1 {
-                rowsInSection = ConstGarageFlow.SettingsCarCellDataRow.allCases.count
-                if section == 2 {
-                    rowsInSection = ConstGarageFlow.ButtonCellAmount.oneCell }
-            } else { return 0 }
+            return rowsInSection
+        case 1:
+            rowsInSection = ConstGarageFlow.SettingsCarCellDataRow.allCases.count
+            return rowsInSection
+        default:
+            rowsInSection = ConstGarageFlow.ButtonCellAmount.oneCell
+            return rowsInSection
         }
-        return rowsInSection
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
 //        let section = self.tableView.numberOfSections
         let section = indexPath.section
-        var cell: UITableViewCell!
+//
+//        var cell: UITableViewCell!
 
         switch section {
         case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as? CellCarNameTVC {
-                cell.titleLbl.text = EnumArraySercice.arrayCarNameCellDataRow[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as! CellCarNameTVC
+            cell.titleLbl.text = EnumArraySercice.arrayCarNameCellDataRow[indexPath.row]
 
-                if currentUserCar != nil {
-                    if indexPath.row == 0 {
-                        cell.itemLbl.text = currentUserCar?.maker
-                    } else {
-                        cell.itemLbl.text = currentUserCar?.model
-                    }
+            if currentUserCar != nil {
+                if indexPath.row == 0 {
+                    cell.itemLbl.text = currentUserCar?.maker
                 } else {
-                    cell.itemLbl.text = ""
+                    cell.itemLbl.text = currentUserCar?.model
                 }
+            } else {
+                cell.itemLbl.text = ""
             }
+            return cell
+
         case 1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellWith2Lbl", for: indexPath) as? CellCarSettingsTVC {
-                cell.titleLbl.text = EnumArraySercice.arraySettingsCarCellDataRow[indexPath.row]
-                cell.parametrLbl.text = "" }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellWith2Lbl", for: indexPath) as! CellCarSettingsTVC
+            cell.titleLbl.text = EnumArraySercice.arraySettingsCarCellDataRow[indexPath.row]
+            cell.parametrLbl.text = ""
+            return cell
 
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? CellButtonTVC {
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as! CellButtonTVC
+            return cell
         }
-        return cell
     }
 }
-

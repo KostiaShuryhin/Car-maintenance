@@ -49,7 +49,7 @@ enum ConstGarageFlow{
         case yearOfPurchase = "Дата покупки"
     }
     enum ButtonCellAmount {
-        static let oneCell = 1
+        static let oneCell: Int = 1
     }
     
     enum DescriprionCellDataRow {

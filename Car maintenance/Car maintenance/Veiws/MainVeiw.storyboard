@@ -356,14 +356,14 @@
         <scene sceneID="2HU-CU-gd3">
             <objects>
                 <tableViewController id="Fzp-rm-eDz" customClass="SettingsCarTVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kPW-bK-fBh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kPW-bK-fBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCarName" id="TIu-Ps-7cW" customClass="CellCarNameTVC" customModule="Car_maintenance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIu-Ps-7cW" id="eni-H9-XpI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -416,7 +416,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellWith2Lbl" id="Sxq-ld-6FK" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sxq-ld-6FK" id="uIW-n0-TcC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -460,7 +460,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellButtons" id="Re6-Vs-3FG" userLabel="CellButtons" customClass="CellButtonTVC" customModule="Car_maintenance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="111.5" width="414" height="40.5"/>
+                                <rect key="frame" x="0.0" y="136.5" width="414" height="40.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Re6-Vs-3FG" id="c0l-vy-haP">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="40.5"/>

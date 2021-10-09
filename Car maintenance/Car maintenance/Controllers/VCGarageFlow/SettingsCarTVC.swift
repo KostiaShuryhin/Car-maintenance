@@ -13,6 +13,7 @@ class SettingsCarTVC: UITableViewController {
     var user: User!
     var ref: DatabaseReference!
     var userCars = [UserCar]()
+    var currentUserCar: UserCar? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,58 +35,46 @@ class SettingsCarTVC: UITableViewController {
 
         if section == 0 {
             rowsInSection = ConstGarageFlow.CarNameCellDataRow.allCases.count
-
-        } else if section == 1 {
-            rowsInSection = ConstGarageFlow.SettingsCarCellDataRow.allCases.count
-
-        } else if section == 2 {
-            rowsInSection = ConstGarageFlow.ButtonCellAmount.oneCell }
-
+            if section == 1 {
+                rowsInSection = ConstGarageFlow.SettingsCarCellDataRow.allCases.count
+                if section == 2 {
+                    rowsInSection = ConstGarageFlow.ButtonCellAmount.oneCell }
+            } else { return 0 }
+        }
         return rowsInSection
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let section = self.tableView.numberOfSections
-//        let section = indexPath.section
+//        let section = self.tableView.numberOfSections
+        let section = indexPath.section
         var cell: UITableViewCell!
 
-        if section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as! CellCarNameTVC
-//
-//            var dataArray = [String]()
-//            let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
-//
-//            for item in arrayEnumTipe {
-//                let itemString = item.rawValue
-//                dataArray.append(itemString)
-            }
+        switch section {
+        case 0:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath) as? CellCarNameTVC {
+                cell.titleLbl.text = EnumArraySercice.arrayCarNameCellDataRow[indexPath.row]
 
-            return cell
+                if currentUserCar != nil {
+                    if indexPath.row == 0 {
+                        cell.itemLbl.text = currentUserCar?.maker
+                    } else {
+                        cell.itemLbl.text = currentUserCar?.model
+                    }
+                } else {
+                    cell.itemLbl.text = ""
+                }
+            }
+        case 1:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellWith2Lbl", for: indexPath) as? CellCarSettingsTVC {
+                cell.titleLbl.text = EnumArraySercice.arraySettingsCarCellDataRow[indexPath.row]
+                cell.parametrLbl.text = "" }
+
+        default:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? CellButtonTVC {
+            }
         }
         return cell
     }
-
-//        return cell
 }
-
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarName", for: indexPath)
-//
-//
-//        cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
-//        return cell
-
-
-// MARK: - Navigation
-/*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
 

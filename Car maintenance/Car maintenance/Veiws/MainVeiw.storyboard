@@ -415,7 +415,7 @@
                                     <segue destination="5fD-dJ-szL" kind="show" id="Lti-WW-vGR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWith2Lbl" id="Sxq-ld-6FK" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellWith2Lbl" id="Sxq-ld-6FK" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sxq-ld-6FK" id="uIW-n0-TcC">
@@ -459,7 +459,7 @@
                                     <outlet property="titleLbl" destination="ir5-uz-kvo" id="XaD-xb-pQF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Re6-Vs-3FG" userLabel="CellButtons" customClass="CellButtonTVC" customModule="Car_maintenance" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellButtons" id="Re6-Vs-3FG" userLabel="CellButtons" customClass="CellButtonTVC" customModule="Car_maintenance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="111.5" width="414" height="40.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Re6-Vs-3FG" id="c0l-vy-haP">

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class EnumArraySercice {
-    
-    var arrayCarNameCellDataRow: [String] {
+struct EnumArraySercice {
+
+    static var arrayCarNameCellDataRow: [String] {
         get {
             var dataArray = [String]()
             let arrayEnumTipe = ConstGarageFlow.CarNameCellDataRow.allCases
@@ -21,8 +21,8 @@ class EnumArraySercice {
             }
         }
     }
-    
-    var arraySettingsCarCellDataRow: [String] {
+
+    static var arraySettingsCarCellDataRow: [String] {
         get {
             var dataArray = [String]()
             let arrayEnumTipe = ConstGarageFlow.SettingsCarCellDataRow.allCases
@@ -35,3 +35,4 @@ class EnumArraySercice {
         }
     }
 }
+

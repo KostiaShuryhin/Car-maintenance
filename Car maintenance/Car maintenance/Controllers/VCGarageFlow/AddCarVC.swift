@@ -31,7 +31,6 @@ class AddCarVC: UIViewController{
         if userCar.isEmpty == false {
             performSegue(withIdentifier: Constants.Segues.userCarIsNotEmpty, sender: nil)
         }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

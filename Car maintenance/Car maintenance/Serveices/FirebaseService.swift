@@ -22,10 +22,10 @@ class FirebaseService {
     static func checkCarArray(currentUser: User) -> Bool {
         var booleValu: Bool = false
 
-        let carRef = Database.database().reference(withPath: "users").child(String(currentUser.uid)).child("userCars")
+        let carRef = Database.database().reference(
+            withPath: "users").child(String(currentUser.uid)).child("userCars")
 
         carRef.getData { _, DataSnapshot in
-
             if DataSnapshot.exists() {
                 booleValu = true
             }

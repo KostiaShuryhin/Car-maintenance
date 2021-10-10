@@ -17,6 +17,8 @@
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
 		B537FCE627131BF7004C820D /* UrlSesionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537FCE527131BF7004C820D /* UrlSesionService.swift */; };
 		B537FCE927132F00004C820D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B537FCE827132F00004C820D /* SwiftyJSON */; };
+		B537FCEC27136A27004C820D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537FCEB27136A27004C820D /* File.swift */; };
+		B537FCF027136D22004C820D /* ModelOrManufactureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537FCEF27136D22004C820D /* ModelOrManufactureCell.swift */; };
 		B57EA3CA26F8C2C300B439DA /* CellCarNameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */; };
 		B57EA3CC26F8C2FF00B439DA /* CellCarSettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */; };
 		B57EA3CF26F8C32D00B439DA /* CellButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3CE26F8C32D00B439DA /* CellButtonTVC.swift */; };
@@ -45,6 +47,8 @@
 		B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVeiw.storyboard; sourceTree = "<group>"; };
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B537FCE527131BF7004C820D /* UrlSesionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSesionService.swift; sourceTree = "<group>"; };
+		B537FCEB27136A27004C820D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B537FCEF27136D22004C820D /* ModelOrManufactureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOrManufactureCell.swift; sourceTree = "<group>"; };
 		B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarNameTVC.swift; sourceTree = "<group>"; };
 		B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarSettingsTVC.swift; sourceTree = "<group>"; };
 		B57EA3CE26F8C32D00B439DA /* CellButtonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTVC.swift; sourceTree = "<group>"; };
@@ -98,8 +102,8 @@
 				B52AC7D326EE1C15000B72FE /* Constants */,
 				B52AC7D926EE1CE7000B72FE /* Serveices */,
 				B52AC7D426EE1C46000B72FE /* Models */,
-				B52AC7D526EE1C63000B72FE /* Controllers */,
 				B52AC7D626EE1C6E000B72FE /* Veiws */,
+				B52AC7D526EE1C63000B72FE /* Controllers */,
 				B52AC7CD26EE1C0F000B72FE /* Info.plist */,
 				B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */,
 				B59EDEF226F904940005C390 /* vcvc.swift */,
@@ -167,6 +171,7 @@
 				B537FCE527131BF7004C820D /* UrlSesionService.swift */,
 				B59EDEF626FA22C80005C390 /* FirebaseService.swift */,
 				B5065B382711AAB8007D0917 /* EnumArrayService.swift */,
+				B537FCEA27136A04004C820D /* New Group */,
 			);
 			path = Serveices;
 			sourceTree = "<group>";
@@ -205,10 +210,27 @@
 			path = VCSingInFlow;
 			sourceTree = "<group>";
 		};
+		B537FCEA27136A04004C820D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B537FCEB27136A27004C820D /* File.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B537FCEE27136CC2004C820D /* ModelOrManufactureCell */ = {
+			isa = PBXGroup;
+			children = (
+				B537FCEF27136D22004C820D /* ModelOrManufactureCell.swift */,
+			);
+			path = ModelOrManufactureCell;
+			sourceTree = "<group>";
+		};
 		B57EA3C826F8C27500B439DA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				B57EA3D026F8C33100B439DA /* GarageCell */,
+				B537FCEE27136CC2004C820D /* ModelOrManufactureCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -317,6 +339,7 @@
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
 				B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */,
 				B59EDEF326F904940005C390 /* vcvc.swift in Sources */,
+				B537FCEC27136A27004C820D /* File.swift in Sources */,
 				B5065B392711AAB8007D0917 /* EnumArrayService.swift in Sources */,
 				B5C766EE26EF6EBB00EAD2D9 /* User.swift in Sources */,
 				B5E4C86326F782A9004ABDC0 /* Car.swift in Sources */,
@@ -327,6 +350,7 @@
 				B57EA3CF26F8C32D00B439DA /* CellButtonTVC.swift in Sources */,
 				B5F2ADCA26F4BD990036E5AB /* AddCarVC.swift in Sources */,
 				B57EA3CA26F8C2C300B439DA /* CellCarNameTVC.swift in Sources */,
+				B537FCF027136D22004C820D /* ModelOrManufactureCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

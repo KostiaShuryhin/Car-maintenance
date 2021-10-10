@@ -27,19 +27,17 @@ class CarModelOrManufacturerTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return ConstGarageFlow.AmountSection.descriptionTVC
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return CarArray.carArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "modelOrManufacture", for: indexPath) as! ModelOrManufactureCell
+        cell.titleLbl.text = CarArray.carArray[indexPath.row]
         return cell
     }
 

@@ -24,18 +24,17 @@ enum Constants {
     }
 }
 
+enum Url: String {
+    case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
+    case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
+}
+
 enum ConstGarageFlow{
     
     enum AmountSection {
         static let settingsTVC: Int = 3
         static let descriptionTVC: Int = 1
     }
-// MARK: - заменить в коде кол. элементов в массиве
-//    enum CountOfCellsInSectionInTVCSettingsCar {
-//        static let sectionCarName: Int = 2
-//        static let sectionSettings: Int = 6
-//        static let sectionButtons: Int = 1
-//    }
     
     enum CarNameCellDataRow: String, CaseIterable  {
         case manufacturer = "Марка"
@@ -56,11 +55,7 @@ enum ConstGarageFlow{
     
     enum DescriprionCellDataRow {
     }
-    
-    enum Url: String {
-        case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
-        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
-    }
+
 }
 
 //enum ConstMaintenance {

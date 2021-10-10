@@ -52,11 +52,11 @@ class ChooseCarVC: UIViewController {
             // MARK: - првоерить нижнию навигацию!! проблема
 //        с is inition. может сделать проверку и перетянуть его через код? или через навигатион контроллер
         
-        
-        if FirebaseService.checkCarArray(currentUser: user) == false {
-            navigationController?.popViewController(animated: true)
-        } else {
-                return userCars = FirebaseService.getUserCarArray(currentUser: user)}
+        // вернуть
+//        if FirebaseService.checkCarArray(currentUser: user) == false {
+//            navigationController?.popViewController(animated: true)
+//        } else {
+//                return userCars = FirebaseService.getUserCarArray(currentUser: user)}
         }
     
     

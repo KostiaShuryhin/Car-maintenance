@@ -139,10 +139,149 @@
                     <tabBarItem key="tabBarItem" title="Сервис" image="ServiseIcone" selectedImage="ServiseIcone" id="0Yw-0a-ZIe">
                         <color key="badgeColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="io3-Ro-vaz" kind="show" id="KE0-ik-I04"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQP-yI-aOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727.536231884058" y="-646.20535714285711"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Kzs-fj-bh4">
+            <objects>
+                <tableViewController id="io3-Ro-vaz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gI1-vE-cgb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TI3-OJ-Qqw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="Обслуживание"/>
+                                <segment title="Планирование"/>
+                            </segments>
+                            <color key="tintColor" name="AccentColor"/>
+                            <color key="selectedSegmentTintColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </segmentedControl>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellWith2Lbl" id="QIT-P2-Mhr" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIT-P2-Mhr" id="DOe-pM-oIp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-fO-Fge">
+                                            <rect key="frame" x="35" y="12" width="150" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="LF0-WI-Hsg"/>
+                                                <constraint firstAttribute="height" constant="20" id="S3c-OP-TUa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="06L-UQ-WoA">
+                                            <rect key="frame" x="229" y="11.5" width="150" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-rW-MqP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Cvh-Uh-u9r"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="06L-UQ-WoA" secondAttribute="trailing" constant="15" id="Vfg-nK-qbz"/>
+                                        <constraint firstItem="cHc-fO-Fge" firstAttribute="leading" secondItem="DOe-pM-oIp" secondAttribute="leadingMargin" constant="15" id="htX-TF-tR5"/>
+                                        <constraint firstItem="cHc-fO-Fge" firstAttribute="centerY" secondItem="DOe-pM-oIp" secondAttribute="centerY" id="wft-tT-YIg"/>
+                                        <constraint firstItem="06L-UQ-WoA" firstAttribute="centerY" secondItem="DOe-pM-oIp" secondAttribute="centerY" id="yh2-T4-7F0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="parametrLbl" destination="GuU-rW-MqP" id="HiD-VY-gBr"/>
+                                    <outlet property="titleLbl" destination="cHc-fO-Fge" id="Dwf-ew-A5h"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellButtons" id="FnA-FT-n7A" userLabel="CellButtons" customClass="CellButtonTVC" customModule="Car_maintenance" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="414" height="60.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FnA-FT-n7A" id="1P4-d9-RAA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-J5-8RT">
+                                            <rect key="frame" x="15" y="5" width="384" height="50.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXP-nD-mwv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="50.5"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ZiR-db-bWW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Удалить">
+                                                        <color key="titleColor" systemColor="systemRedColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="delCarBtn:" destination="FnA-FT-n7A" eventType="touchUpInside" id="2FS-rt-EwU"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-7z-QPf">
+                                                    <rect key="frame" x="197" y="0.0" width="187" height="50.5"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Сохранить">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="saveCarSettingsBtn:" destination="FnA-FT-n7A" eventType="touchUpInside" id="vfs-dt-elk"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gXP-nD-mwv" firstAttribute="width" secondItem="0iE-7z-QPf" secondAttribute="width" id="eKS-U3-rzi"/>
+                                                <constraint firstItem="gXP-nD-mwv" firstAttribute="height" secondItem="0iE-7z-QPf" secondAttribute="height" id="oGh-6c-K4u"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4i8-J5-8RT" secondAttribute="trailing" constant="15" id="0zO-6K-vno"/>
+                                        <constraint firstItem="4i8-J5-8RT" firstAttribute="centerY" secondItem="1P4-d9-RAA" secondAttribute="centerY" id="4mc-eL-316"/>
+                                        <constraint firstAttribute="bottom" secondItem="4i8-J5-8RT" secondAttribute="bottom" constant="5" id="9vc-dl-HoR"/>
+                                        <constraint firstItem="4i8-J5-8RT" firstAttribute="top" secondItem="1P4-d9-RAA" secondAttribute="top" constant="5" id="IiG-mv-g70"/>
+                                        <constraint firstItem="4i8-J5-8RT" firstAttribute="leading" secondItem="1P4-d9-RAA" secondAttribute="leading" constant="15" id="LM5-u5-yzh"/>
+                                        <constraint firstItem="4i8-J5-8RT" firstAttribute="centerX" secondItem="1P4-d9-RAA" secondAttribute="centerX" id="osL-DM-3zn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delBtn" destination="gXP-nD-mwv" id="CJu-bb-tNX"/>
+                                    <outlet property="saveBtn" destination="0iE-7z-QPf" id="otq-KW-Tf2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="io3-Ro-vaz" id="enN-tn-2ee"/>
+                            <outlet property="delegate" destination="io3-Ro-vaz" id="SbC-1w-okk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vvL-tX-Z6F"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgR-cU-GYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="-646"/>
         </scene>
         <!--Топливо-->
         <scene sceneID="29l-Nz-8UE">
@@ -459,6 +598,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WS6-05-Ngf"/>
                     <connections>
+                        <outlet property="chooseBtn" destination="lGK-4k-ahc" id="WoB-fC-u3j"/>
                         <outlet property="pickerVeiw" destination="BTI-iD-xxw" id="yMv-zj-YP7"/>
                         <segue destination="Fzp-rm-eDz" kind="show" identifier="settingsCarIsEmpty" id="hO6-jL-CWN"/>
                     </connections>

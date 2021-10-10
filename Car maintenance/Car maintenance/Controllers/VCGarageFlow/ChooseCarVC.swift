@@ -24,6 +24,7 @@ class ChooseCarVC: UIViewController {
     var userCars = [UserCar]()
 
     @IBOutlet weak var pickerVeiw: UIPickerView!
+    @IBOutlet weak var chooseBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class ChooseCarVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        chooseBtn.layer.cornerRadius = chooseBtn.frame.height / 2
   
             // MARK: - првоерить нижнию навигацию!! проблема
 //        с is inition. может сделать проверку и перетянуть его через код? или через навигатион контроллер

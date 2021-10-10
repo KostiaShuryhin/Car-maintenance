@@ -62,3 +62,9 @@ enum ConstGarageFlow{
         case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
     }
 }
+
+//enum ConstMaintenance {
+//    enum MaintananceCell: String, CaseIterable {
+//
+//    }
+//}

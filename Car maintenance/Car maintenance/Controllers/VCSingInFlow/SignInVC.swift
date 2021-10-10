@@ -17,7 +17,9 @@ class SignInVC: UIViewController {
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-
+    @IBOutlet weak var sinInBtn: UIButton!
+    @IBOutlet weak var registrationBtn: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,9 @@ class SignInVC: UIViewController {
         emailTF.text = ""
         passwordTF.text = ""
         errorLbl.alpha = 0
+        
+        sinInBtn.layer.cornerRadius = sinInBtn.frame.height / 2
+        registrationBtn.layer.cornerRadius = registrationBtn.frame.height / 2
     }
 
     @IBAction func singInTapped(_ sender: Any) {

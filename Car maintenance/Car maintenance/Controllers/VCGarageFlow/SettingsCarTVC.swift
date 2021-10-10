@@ -81,6 +81,10 @@ class SettingsCarTVC: UITableViewController {
 
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as! CellButtonTVC
+            
+            cell.delBtn.layer.cornerRadius = cell.delBtn.frame.height / 2
+            cell.saveBtn.layer.cornerRadius = cell.saveBtn.frame.height / 2
+            
             return cell
         }
     }

@@ -45,7 +45,7 @@ enum ConstGarageFlow{
     enum SettingsCarCellDataRow: String, CaseIterable {
         case carName = "Название"
         case mileage = "Пробег"
-        case power = "Мощнасть"
+        case power = "Мощность"
         case fulel = "Вид топлива"
         case yearOfManufacture = "Год выпуска"
         case yearOfPurchase = "Дата покупки"

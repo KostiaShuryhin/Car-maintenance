@@ -9,6 +9,9 @@ import UIKit
 
 class CellButtonTVC: UITableViewCell {
 
+    @IBOutlet weak var delBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
+    
     
     @IBAction func delCarBtn(_ sender: Any) {
     }

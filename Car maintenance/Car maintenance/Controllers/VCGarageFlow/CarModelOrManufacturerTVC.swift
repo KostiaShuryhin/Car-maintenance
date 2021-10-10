@@ -9,6 +9,10 @@ import UIKit
 
 class CarModelOrManufacturerTVC: UITableViewController {
 
+    var destinationUrl: String = ""
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -359,7 +359,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kPW-bK-fBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" systemColor="systemYellowColor"/>
+                        <color key="sectionIndexColor" red="0.99389201400000005" green="0.81695026159999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCarName" id="TIu-Ps-7cW" customClass="CellCarNameTVC" customModule="Car_maintenance" customModuleProvider="target">
@@ -412,7 +414,6 @@
                                 <connections>
                                     <outlet property="itemLbl" destination="5pi-L6-0CX" id="kaT-RH-S9b"/>
                                     <outlet property="titleLbl" destination="hn4-sS-IUR" id="N7E-kb-Pq9"/>
-                                    <segue destination="5fD-dJ-szL" kind="show" id="Lti-WW-vGR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellWith2Lbl" id="Sxq-ld-6FK" customClass="CellCarSettingsTVC" customModule="Car_maintenance" customModuleProvider="target">
@@ -513,6 +514,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="44p-i3-0xz"/>
+                    <connections>
+                        <segue destination="5fD-dJ-szL" kind="show" identifier="carModelOrManufacturer" id="duM-mE-Dil"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIo-kd-h9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

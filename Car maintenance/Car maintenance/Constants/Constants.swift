@@ -14,6 +14,7 @@ enum Constants {
         static let userCarIsNotEmpty = "userCarIsNotEmptySegua"
         static let settingsCarIsEmpty = "settingsCarIsEmpty"
         static let createUserCar = "createUserCar"
+        static let carModelOrManufacturer = "carModelOrManufacturer"
     }
     
     enum FireBase {

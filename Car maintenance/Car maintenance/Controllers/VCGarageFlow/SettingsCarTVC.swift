@@ -22,6 +22,10 @@ class SettingsCarTVC: UITableViewController {
         let user = User(user: currentUser)
         ref = Database.database().reference(withPath: Constants.FireBase.users).child(String(user.uid)).child(Constants.FireBase.userCars)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     // MARK: - Table view data source
 
@@ -78,6 +82,25 @@ class SettingsCarTVC: UITableViewController {
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as! CellButtonTVC
             return cell
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.carModelOrManufacturer {
+            if let carModelOrManufacturer = segue.destination as? CarModelOrManufacturerTVC {
+                guard let destinationUrl = sender as? String else { return }
+                
+                carModelOrManufacturer.destinationUrl = destinationUrl
+            }
+        }
+    }
+}
+
+extension SettingsCarTVC {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let destinationUrl: String = EnumArraySercice.arrayCarNameCellDataRow[indexPath.row]
+            performSegue(withIdentifier: Constants.Segues.carModelOrManufacturer, sender: destinationUrl)
         }
     }
 }

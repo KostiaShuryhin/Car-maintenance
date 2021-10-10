@@ -15,6 +15,8 @@
 		B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC7DE26EE1E62000B72FE /* SignInVC.swift */; };
 		B52AC7E126EE1FCB000B72FE /* MainVeiw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */; };
 		B52AC7F526EE30BC000B72FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */; };
+		B537FCE627131BF7004C820D /* UrlSesionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537FCE527131BF7004C820D /* UrlSesionService.swift */; };
+		B537FCE927132F00004C820D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B537FCE827132F00004C820D /* SwiftyJSON */; };
 		B57EA3CA26F8C2C300B439DA /* CellCarNameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */; };
 		B57EA3CC26F8C2FF00B439DA /* CellCarSettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */; };
 		B57EA3CF26F8C32D00B439DA /* CellButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA3CE26F8C32D00B439DA /* CellButtonTVC.swift */; };
@@ -42,6 +44,7 @@
 		B52AC7DE26EE1E62000B72FE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		B52AC7E026EE1FCB000B72FE /* MainVeiw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVeiw.storyboard; sourceTree = "<group>"; };
 		B52AC7F426EE30BC000B72FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B537FCE527131BF7004C820D /* UrlSesionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSesionService.swift; sourceTree = "<group>"; };
 		B57EA3C926F8C2C300B439DA /* CellCarNameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarNameTVC.swift; sourceTree = "<group>"; };
 		B57EA3CB26F8C2FF00B439DA /* CellCarSettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCarSettingsTVC.swift; sourceTree = "<group>"; };
 		B57EA3CE26F8C32D00B439DA /* CellButtonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTVC.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B537FCE927132F00004C820D /* SwiftyJSON in Frameworks */,
 				B5BA966F26EF9C5E002BF186 /* FirebaseDatabase in Frameworks */,
 				B5BA966D26EF9C5E002BF186 /* FirebaseAuth in Frameworks */,
 			);
@@ -160,6 +164,7 @@
 		B52AC7D926EE1CE7000B72FE /* Serveices */ = {
 			isa = PBXGroup;
 			children = (
+				B537FCE527131BF7004C820D /* UrlSesionService.swift */,
 				B59EDEF626FA22C80005C390 /* FirebaseService.swift */,
 				B5065B382711AAB8007D0917 /* EnumArrayService.swift */,
 			);
@@ -244,6 +249,7 @@
 			packageProductDependencies = (
 				B5BA966C26EF9C5E002BF186 /* FirebaseAuth */,
 				B5BA966E26EF9C5E002BF186 /* FirebaseDatabase */,
+				B537FCE827132F00004C820D /* SwiftyJSON */,
 			);
 			productName = "Car maintenance";
 			productReference = B52AC7BC26EE1C0D000B72FE /* Car maintenance.app */;
@@ -274,6 +280,7 @@
 			mainGroup = B52AC7B326EE1C0D000B72FE;
 			packageReferences = (
 				B52AC7EF26EE22EB000B72FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B537FCE727132EFF004C820D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = B52AC7BD26EE1C0D000B72FE /* Products */;
 			projectDirPath = "";
@@ -306,6 +313,7 @@
 				B52AC7C026EE1C0D000B72FE /* AppDelegate.swift in Sources */,
 				B52AC7C226EE1C0D000B72FE /* SceneDelegate.swift in Sources */,
 				B59EDEF726FA22C80005C390 /* FirebaseService.swift in Sources */,
+				B537FCE627131BF7004C820D /* UrlSesionService.swift in Sources */,
 				B52AC7DF26EE1E62000B72FE /* SignInVC.swift in Sources */,
 				B5F2ADCE26F4BE500036E5AB /* SettingsCarTVC.swift in Sources */,
 				B59EDEF326F904940005C390 /* vcvc.swift in Sources */,
@@ -524,9 +532,22 @@
 				minimumVersion = 8.7.0;
 			};
 		};
+		B537FCE727132EFF004C820D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B537FCE827132F00004C820D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B537FCE727132EFF004C820D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		B5BA966C26EF9C5E002BF186 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B52AC7EF26EE22EB000B72FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

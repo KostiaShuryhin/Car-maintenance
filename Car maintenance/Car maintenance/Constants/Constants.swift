@@ -39,7 +39,8 @@ enum ConstGarageFlow{
     
     enum CarNameCellDataRow: String, CaseIterable  {
         case manufacturer = "Марка"
-        case model = "Модель" }
+        case model = "Модель"
+    }
     
     enum SettingsCarCellDataRow: String, CaseIterable {
         case carName = "Название"
@@ -54,5 +55,10 @@ enum ConstGarageFlow{
     }
     
     enum DescriprionCellDataRow {
+    }
+    
+    enum Url: String {
+        case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
+        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
     }
 }

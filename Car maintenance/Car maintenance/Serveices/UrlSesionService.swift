@@ -18,9 +18,9 @@ class DataFromServer{
         
         switch modelOrManufacture {
         case ConstGarageFlow.CarNameCellDataRow.manufacturer.rawValue:
-            url = ConstGarageFlow.Url.forGetManufacturer.rawValue
+            url = Constants.Url.forGetManufacturer.rawValue
         case ConstGarageFlow.CarNameCellDataRow.model.rawValue:
-            url = ConstGarageFlow.Url.forGetModelFromCar.rawValue
+            url = Constants.Url.forGetModelFromCar.rawValue
         default:
             return [""]
         }
@@ -41,12 +41,6 @@ class DataFromServer{
             let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
                 if let data = data{
                     let json = JSON(data)
-                    
-                    
-                    
-                    
-                    
-                    
                 } else if (error != nil) {
                     print(error)
                 } else {

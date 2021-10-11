@@ -22,11 +22,11 @@ enum Constants {
         static let user = "user"
         static let userCars = "userCars"
     }
-}
-
-enum Url: String {
-    case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
-    case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
+    
+    enum Url: String {
+        case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
+        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
+    }
 }
 
 enum ConstGarageFlow{

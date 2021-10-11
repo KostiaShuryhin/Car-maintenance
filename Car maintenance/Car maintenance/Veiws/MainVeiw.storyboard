@@ -550,7 +550,7 @@
             </objects>
             <point key="canvasLocation" x="696" y="-1302"/>
         </scene>
-        <!--Choose CarVC-->
+        <!--Гараж-->
         <scene sceneID="3r3-8t-wHS">
             <objects>
                 <viewController id="azZ-oq-N52" customClass="ChooseCarVC" customModule="Car_maintenance" customModuleProvider="target" sceneMemberID="viewController">
@@ -559,7 +559,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-ZN-5oo">
-                                <rect key="frame" x="30" y="332" width="354" height="286"/>
+                                <rect key="frame" x="30" y="307.5" width="354" height="286"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-iD-xxw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="216"/>
@@ -596,7 +596,11 @@
                             <constraint firstItem="WiP-ZN-5oo" firstAttribute="centerY" secondItem="HNf-9o-5ld" secondAttribute="centerY" id="aa4-RD-YfN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Гараж" image="GarageIcon" selectedImage="GarageIcon" id="HsC-TG-pp5">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="WS6-05-Ngf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chooseBtn" destination="lGK-4k-ahc" id="WoB-fC-u3j"/>
                         <outlet property="pickerVeiw" destination="BTI-iD-xxw" id="yMv-zj-YP7"/>

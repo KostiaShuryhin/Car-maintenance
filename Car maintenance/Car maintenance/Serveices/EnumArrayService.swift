@@ -34,5 +34,18 @@ struct EnumArraySercice {
             return dataArray
         }
     }
+    
+    static var arraySettingsDefoltValu: [String] {
+        get {
+            var dataArray = [String]()
+            let arrayEnumTipe = ConstGarageFlow.SettingsCarDefoltValu.allCases
+
+            for item in arrayEnumTipe {
+                let itemString: String = item.rawValue
+                dataArray.append(itemString)
+            }
+            return dataArray
+        }
+    }
 }
 

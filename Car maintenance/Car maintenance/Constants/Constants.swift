@@ -23,9 +23,20 @@ enum Constants {
         static let userCars = "userCars"
     }
     
+
+}
+
+enum ConstAPI {
     enum Url: String {
         case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
-        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=10&page=0"
+        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=50&page=0"
+    }
+    
+    enum heder {
+        static let rapidapi: [String : String] = [
+        "x-rapidapi-host": "car-data.p.rapidapi.com",
+        "x-rapidapi-key": "73fe264137msh6661965b82ae8a1p164f55jsn3639d75bec4b"
+    ]
     }
 }
 
@@ -49,6 +60,16 @@ enum ConstGarageFlow{
         case yearOfManufacture = "Год выпуска"
         case yearOfPurchase = "Дата покупки"
     }
+    
+    enum SettingsCarDefoltValu: String, CaseIterable {
+        case carName = "ford Fusion"
+        case mileage = "74500 км"
+        case power = "176 л.с."
+        case fulel = "АИ-95"
+        case yearOfManufacture = "2015"
+        case yearOfPurchase = "20.08.2021"
+    }
+    
     enum ButtonCellAmount {
         static let oneCell: Int = 1
     }

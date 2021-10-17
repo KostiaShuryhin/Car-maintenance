@@ -76,7 +76,7 @@ class SettingsCarTVC: UITableViewController {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellWith2Lbl", for: indexPath) as! CellCarSettingsTVC
             cell.titleLbl.text = EnumArraySercice.arraySettingsCarCellDataRow[indexPath.row]
-            cell.parametrLbl.text = ""
+            cell.parametrLbl.text = EnumArraySercice.arraySettingsDefoltValu[indexPath.row]
             return cell
 
         default:

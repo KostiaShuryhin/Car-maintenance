@@ -29,7 +29,7 @@ enum Constants {
 enum ConstAPI {
     enum Url: String {
         case forGetManufacturer = "https://car-data.p.rapidapi.com/cars/makes"
-        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=50&page=0"
+        case forGetModelFromCar = "https://car-data.p.rapidapi.com/cars?limit=50&page="
     }
     
     enum heder {

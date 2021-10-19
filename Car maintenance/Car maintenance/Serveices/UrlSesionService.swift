@@ -64,29 +64,58 @@ class DataFromServer {
 
         return array
     }
-    
-    func fechDataModel () -> (){
-        
-        
-        
+
+    func fechDataModel (Current carManufacture: String) -> ([String]) {
+        var array = [String]()
+        var url: String = ConstAPI.Url.forGetManufacturer.rawValue
+
         let headers = ConstAPI.heder.rapidapi
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://car-data.p.rapidapi.com/cars?limit=50&page=0&make=Volo")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+        for page in 0...4 {
 
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error)
+            if carManufacture.isEmpty {
+                url += "\(page)"
             } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
+                url += "\(page)"
+                url += "&make=\(carManufacture)"
             }
-        })
+            print(url)
 
-        dataTask.resume()
+            let request = NSMutableURLRequest(url: NSURL(string: url)! as URL,
+                cachePolicy: .useProtocolCachePolicy,
+                timeoutInterval: 10.0)
+            request.httpMethod = "GET"
+            request.allHTTPHeaderFields = headers
+
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                if let data = data {
+                    let json = JSON(data)
+                    
+                    array = json[].dictionaryValue. {$0["model"].stringValue}
+//                    первый попаушийся способ
+
+                } else {
+                    
+                    
+                }
+                
+                
+                if (error != nil) {
+                    print(error)
+                } else {
+                    let httpResponse = response as? HTTPURLResponse
+                    print(httpResponse)
+                }
+            })
+
+            dataTask.resume()
+
+
+
+
+
+
+        }
     }
 }

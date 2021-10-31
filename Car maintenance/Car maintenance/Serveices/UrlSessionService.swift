@@ -11,7 +11,7 @@ import Foundation
 
 class DataFromServer {
 
-    func fechDataManufacture () -> [String] {
+   static func fechDataManufacture () -> [String] {
 
         var array = [String]()
 
@@ -27,7 +27,7 @@ class DataFromServer {
 
 
         let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { [weak self] (data, response, error) -> Void in
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if let data = data {
                 let json = JSON(data)
 
@@ -48,7 +48,7 @@ class DataFromServer {
         return array
     }
 
-    func fechDataModel (Current carManufacture: String) -> ([String]) {
+   static func fechDataModel (Current carManufacture: String) -> ([String]) {
         var array = [String]()
         var url: String = ConstAPI.Url.forGetManufacturer.rawValue
 
@@ -75,36 +75,36 @@ class DataFromServer {
                 if let data = data {
                     let json = JSON(data)
                     
-
-                    let car: JSON = [
-                        "id":Int,
-                        "year":Int,
-                        "make":String,
-                        "model":String,
-                        "type":String
-                    ]
+                    let arrayOfString = json[].arrayValue.map({$0["model"]})
+                    print(arrayOfString)
                     
                     
-                    let auth: JSON = [
-                      "user": user.object, // use user.object instead of just user
-                      "apikey": "supersecretapitoken"
-                    ]
-                } else {
+//                    let car: JSON = [
+//                        "id":Int,
+//                        "year":Int,
+//                        "make":String,
+//                        "model" : String,
+//                        "type" : String
+//                    ]
                     
-
-                }
-                
-                
-                if (error != nil) {
-                    print(error)
+                    
+//                    let auth: JSON = [
+//                      "user": user.object, // use user.object instead of just user
+//                      "apikey": "supersecretapitoken"
+//                    ]
+                } else if (error != nil) {
+                    print(error as Any)
                 } else {
                     let httpResponse = response as? HTTPURLResponse
-                    print(httpResponse)
+                    print(httpResponse as Any)
                 }
             })
 
             dataTask.resume()
 
         }
+        
+        return array
     }
 }
+

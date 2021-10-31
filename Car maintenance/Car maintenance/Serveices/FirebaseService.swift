@@ -48,7 +48,6 @@ class FirebaseService {
 
     static func signOutTapped () {
         do {
-            // выходим из Auth.auth()
             try Auth.auth().signOut()
         } catch {
             print(error.localizedDescription)

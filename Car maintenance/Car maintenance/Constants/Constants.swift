@@ -79,8 +79,3 @@ enum ConstGarageFlow{
 
 }
 
-//enum ConstMaintenance {
-//    enum MaintananceCell: String, CaseIterable {
-//
-//    }
-//}

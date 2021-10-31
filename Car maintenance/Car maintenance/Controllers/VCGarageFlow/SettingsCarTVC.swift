@@ -52,10 +52,7 @@ class SettingsCarTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-//        let section = self.tableView.numberOfSections
         let section = indexPath.section
-//
-//        var cell: UITableViewCell!
 
         switch section {
         case 0:

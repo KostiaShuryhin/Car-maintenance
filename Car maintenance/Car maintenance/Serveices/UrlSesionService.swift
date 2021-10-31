@@ -16,23 +16,6 @@ class DataFromServer {
         var array = [String]()
 
         let url: String = ConstAPI.Url.forGetManufacturer.rawValue
-//        var boolToSwichURLManufacturer: Bool?
-//        var dataToGET: String = ""
-
-
-//        switch modelOrManufacture {
-//        case ConstGarageFlow.CarNameCellDataRow.manufacturer.rawValue:
-//            url = Constants.Url.forGetManufacturer.rawValue
-//            boolToSwichURLManufacturer = true
-////            dataToGET =
-//        case ConstGarageFlow.CarNameCellDataRow.model.rawValue:
-//            url = Constants.Url.forGetModelFromCar.rawValue
-//            boolToSwichURLManufacturer = false
-////            dataToGET =
-//        default:
-//            print("non valid reqest to get API data")
-//            break
-//        }
 
         let headers = ConstAPI.heder.rapidapi
 
@@ -92,12 +75,23 @@ class DataFromServer {
                 if let data = data {
                     let json = JSON(data)
                     
-                    array = json[].dictionaryValue. {$0["model"].stringValue}
-//                    первый попаушийся способ
 
+                    let car: JSON = [
+                        "id":Int,
+                        "year":Int,
+                        "make":String,
+                        "model":String,
+                        "type":String
+                    ]
+                    
+                    
+                    let auth: JSON = [
+                      "user": user.object, // use user.object instead of just user
+                      "apikey": "supersecretapitoken"
+                    ]
                 } else {
                     
-                    
+
                 }
                 
                 
@@ -110,11 +104,6 @@ class DataFromServer {
             })
 
             dataTask.resume()
-
-
-
-
-
 
         }
     }

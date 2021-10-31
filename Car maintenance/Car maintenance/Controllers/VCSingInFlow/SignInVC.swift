@@ -12,8 +12,6 @@ class SignInVC: UIViewController {
 
     var ref: DatabaseReference!
 
-
-
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -83,14 +81,9 @@ class SignInVC: UIViewController {
                 guard let user = user else { return }
                 let userRef = self?.ref.child(user.user.uid)
                 userRef?.setValue(["email": user.user.email])
-
-                // не работает !!!1
             }
         }
     }
-
-
-    // MARK: - придумать что то свое
 
     private func displayWarningLabel (warning text: String) {
         errorLbl.text = text
